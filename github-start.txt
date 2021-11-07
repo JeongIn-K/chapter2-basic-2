@@ -10,8 +10,10 @@ git add README.md
 git commit 명령어로 새로운 커밋 생성
 git commit -m "저장소 설명"
 -m : 커밋 메시지를 작성하는 기능
-
+git commit --amend --no-edit  #커밋 메시지 수정안하고 커밋
 git log를 이용해서 커밋 확인
+
+git commit --amend --author "username <email>" 		#커밋 저자 정보 수정
 
 
 리모트 저장소 등록

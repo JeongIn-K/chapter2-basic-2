@@ -1,0 +1,30 @@
+git log
+-p  , --patch : (patch) 파일 단위에서 변경 내용을 보여줌
+git log -숫자 최근 몇개의 커밋을 보여줄지 지정
+git log --stat 각 커밋의 통계 정보(어떤 파일이 수정되었고 각 파일에서 몇줄이 추가, 삭제되었는지 확인)
+git log --pretty 커밋 로그를 보여주는 형식 지정
+git log --pretty={option}
+git log --pretty=format:"%h %an %s"
+git log --pretty==oneline --graph	#가시적 그래프 옵션을 사용하여 커밋 로그의 흐름 파악
+
+git commit --amend  		#커밋 메시지 수정
+git commit --amend -m "수정 메시지" #-m옵션으로 vi편집기 안쓰고 바로 수정가능
+
+pretty format옵션의 종류 - 뭔지 모르겠지만 일단 적어둠
+%H : 커밋 해시
+%h : 짧은 커밋 해시
+%an : 저자 이름
+%s : 커밋 요약
+%T : 트리 해시
+%t : 짧은 트리 해시
+%P : 부모 해시
+%p : 짧은 부모 해시
+%ae : 저자 이메일
+%ar : 저자 상대적 시각
+%cn : 커미터 이름
+%ce : 커미터 이메일
+%cr : 커미터 상대적 시각
+
+
+
+
