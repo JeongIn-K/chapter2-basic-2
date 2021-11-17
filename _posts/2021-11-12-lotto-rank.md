@@ -8,7 +8,6 @@ toc: true
 toc_sticky: true
 ---
 
-### 로또의 최고 순위와 최저 순위
 > 프로그래머스 코딩테스트 연습
 > 난이도 Level 1
 

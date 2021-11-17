@@ -1,8 +1,6 @@
 ---
 layout: page
 title: About
-math: true
-mermaid: true
 ---
 
 ***
@@ -19,20 +17,6 @@ mermaid: true
 ## &#128218; 스킬
 Python, SQL, C/C++, Java, R, HTML/CSS
 > API/Library : OpenCV, Tensorflow, Keras  etc.
-
-```mermaid
- gantt
-  title  Skills that I experienced
-  dateFormat  YYYY-MM
-
-  Node.js, javascript, mySQL: done, 2017-09, 2w
-  C++ : 2017-09, 182w
-  R : 2021-07, 6w
-  Python : crit, 2018-11, 161w
-  Java/Spring: active, 2021-07, 22w
-  HTML/CSS: active, 2021-07, 22w
-  SQL: active, 2021-07, 22w
-```
 
 ## &#128221; 연구경험
 2017.09. ~ 2018.01. 원거리 무인비행체 EO/IR 영상분석 및 탐지/추적 알고리즘 연구<br>2018.03. ~ 2018.11. 소형 표적 추적을 위한 알고리즘 성능 개선<br>2019.04. ~ 2019.11. 환경 변화에 강인한 실시간 무인비행체 탐지/추적 알고리즘 연구<br>
