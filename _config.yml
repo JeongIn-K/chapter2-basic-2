@@ -2,10 +2,10 @@
 title: Jonie Learning
 description: I'm putting together my portfolio.
 url: https://github.com/joniekwon
-avatar: /avatar.JPG
+avatar: /img/avatar.JPG
 paginate: 5
 permalink: pretty
-cover_image: /IMG_0284.JPG
+cover_image: /img/bg.jpg
 
 # Gems
 plugins:
