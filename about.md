@@ -2,7 +2,8 @@
 layout: page
 title: About
 ---
-
+***
+<br>
 ![](/img/self.jpg){:style="max-width: 200px" .left}
 <h1>JeongIn Kwon</h1>
 
@@ -20,12 +21,11 @@ title: About
 
 Python, R, SQL, C++, Java, HTML/CSS etc.
 ![SKILLS](/img/skills.png)
-_경험했던 기술들_
 
 ## 연구경험
 
 2017.09. ~ 2018.01. 원거리 무인비행체 EO/IR 영상분석 및 탐지/추적 알고리즘 연구<br>
-2018.03. ~ 2018.11. 소형 표적 추적을 위한 알고리즘 성능 개선<br><br>
+2018.03. ~ 2018.11. 소형 표적 추적을 위한 알고리즘 성능 개선<br>
 2019.04. ~ 2019.11. 환경 변화에 강인한 실시간 무인비행체 탐지/추적 알고리즘 연구<br>
 
 ## 자격증
