@@ -1,18 +1,11 @@
 ---
-title:  "숫자 문자열과 영단어"
-excerpt: "프로그래머스 코딩테스트 연습 Level 1 "
-
-categories:
-  - [코테연습, python3]
-tags:
-  - [코딩테스트, 프로그래머스(Level1)]
-
+title: 숫자 문자열과 영단어
+excerpt: 프로그래머스 코딩테스트 연습 Level 1
+date: 2021-11-13
+categories:  [코테연습, python3]
+tags: [코딩테스트, 프로그래머스(Level1)]
 toc: true
 toc_sticky: true
-
-date: 2021-11-13
-last_modified_at: 2021-11-13
-
 ---
 
 ### 숫자 문자열과 영단어

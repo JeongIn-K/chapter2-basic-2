@@ -1,18 +1,11 @@
 ---
 title:  "[코테연습] 완주하지 못한 선수"
 excerpt: "프로그래머스 코딩테스트 연습 Level 1 "
-
-categories:
-  - [코테연습, python3]
-tags:
-  - [코딩테스트, 프로그래머스(Level1), 해시]
-
-toc: true
-toc_sticky: true
-
 date: 2021-11-14
 last_modified_at: 2021-11-14
-
+categories: [코테연습, python3]
+tags: [코딩테스트, 프로그래머스(Level1), 해시]
+toc: true
 ---
 
 ### 완주하지 못한 선수
