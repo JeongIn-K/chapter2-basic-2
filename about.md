@@ -3,11 +3,10 @@ layout: page
 title: About
 ---
 
-<img src="./img/self.jpg" width="auto" height="auto" style="border-radius:50%" align="bottom">
-
-<h3>&nbsp;&nbsp;&nbsp;&nbsp;JeongIn Kwon</h3>
-
-
+<img src="https://github.com/joniekwon/joniekwon.github.io/blob/main/img/self.jpg" width="auto" height="auto" style="border-radius:50%" align="bottom">
+<br>
+<h2>&nbsp;&nbsp;&nbsp;&nbsp;JeongIn Kwon</h2>
+<br>
 * **학력**
 2017.08. ~ 2020.02. 국립한밭대학교 정보통신대학원 멀티미디어공학과 석사
 2009.03. ~ 2014.02. 국립한밭대학교 산업경영공학과
