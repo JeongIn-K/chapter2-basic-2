@@ -3,7 +3,7 @@ layout: page
 title: About
 ---
 
-![myPhoto]("./img/self.jpg" width="auto" height="auto" style="border-radius:50%" align="bottom")
+![myPhoto]("/img/self.jpg" width="auto" height="auto" style="border-radius:50%" align="bottom")
 
 <h1>JeongIn Kwon</h1>
 
@@ -33,6 +33,14 @@ Python, R, SQL, C++, Java, HTML/CSS etc.
         C, HTML/CSS, mySQL: done, 2013-09, 24w
         HTML/CSS: 2021-09, 12w
         SQL:active, 2020-09, 64w
+```
+### ???
+```mermaid
+ gantt
+  title  Adding GANTT diagram functionality to mermaid
+  apple :a, 2017-07-20, 1w
+  banana :crit, b, 2017-07-23, 1d
+  cherry :active, c, after b a, 1d
 ```
 
 ##연구경험
