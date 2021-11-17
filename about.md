@@ -3,7 +3,7 @@ layout: page
 title: About
 ---
 
-![myPhoto]("/img/self.jpg" width="auto" height="auto" style="border-radius:50%" align="bottom")
+<img src="https://github.com/joniekwon/joniekwon.github.io/blob/main/img/self.jpg?raw=true" width="auto" height="auto" style="border-radius:50%" align="left">
 
 <h1>JeongIn Kwon</h1>
 
@@ -20,28 +20,8 @@ title: About
 ##스킬
 
 Python, R, SQL, C++, Java, HTML/CSS etc.
-
-```mermaid
-	gantt
-		title  Skills that I experienced
-        dateFormat  YYYY-MM
-
-        C++ : 2017-04, 220w
-        Python :active, 2018-07, 177w
-        Java,R :active, 2021-09, 12w
-        Node.js, javascript, mySQL: done, 2017-03, 12w
-        C, HTML/CSS, mySQL: done, 2013-09, 24w
-        HTML/CSS: 2021-09, 12w
-        SQL:active, 2020-09, 64w
-```
-### ???
-```mermaid
- gantt
-  title  Adding GANTT diagram functionality to mermaid
-  apple :a, 2017-07-20, 1w
-  banana :crit, b, 2017-07-23, 1d
-  cherry :active, c, after b a, 1d
-```
+![SKILLS](/img/skills.png)
+_경험했던 기술들_
 
 ##연구경험
 
