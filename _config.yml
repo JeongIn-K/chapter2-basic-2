@@ -5,7 +5,7 @@ url: https://github.com/joniekwon
 avatar: /img/avatar.JPG
 paginate: 5
 permalink: pretty
-cover_image: /img/bg.jpg
+cover_image: /img/background.jpg
 
 # Gems
 plugins:
@@ -29,11 +29,11 @@ exclude:
 
 # Optimize Jekyl SEO Tag
 twitter:
-  username: JonieKwon
+  username: Jonie Kwon
   card: summary
 logo: logo.png
 social:
-  name: JonieKwon
+  name: Jonie Kwon
   links:
     #- https://twitter.com/joniekwon
     - https://github.com/joniekwon
@@ -54,6 +54,6 @@ sass:
 
 # Specify the author for blog posts
 author:
-  name: JonieKwon
+  name: Jonie Kwon
   url: https://github.com/joniekwon
   email: kkkji1215@naver.com
