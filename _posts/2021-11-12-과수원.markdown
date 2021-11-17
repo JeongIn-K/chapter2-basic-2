@@ -1,0 +1,85 @@
+---
+title:  "과수원"
+excerpt: "코딩 테스트 연습 - 네이버 기출 변형"
+
+categories:
+  - [코테연습, python3]
+tags:
+  - [코딩테스트, 네이버 기출]
+
+toc: true
+toc_sticky: true
+
+date: 2021-11-12
+last_modified_at: 2021-11-12
+
+---
+
+### 과수원
+출처: IT기업 취업준비 실전가이드 (네이버 기출 변형)
+> 난이도 : ★☆☆☆☆
+> 풀이 시간 : 20분
+> 시간 제한 : 1초
+> 메모리 제한 : 256 MB
+
+***
+
+### 문제 요약
+* 거래가 진행되는 날 수: `N`, 과수원의 하루 생산량 `P`, 도매상의 주문량 `C`가 주어짐
+* 생산량과 주문량은 매일 달라지고, 생산량이 도매상의 주문량을 충족할때만 단가 100원의 가격으로 판매할 수 있음
+* 도매상의 주문량을 만족하지 못하면 재고로 쌓이게 되며 판매하지 못할때마다 하루에 20원 씩 차감됨
+* 재고가 주문량을 만족하여 판매하고 나면 그 다음날부터는 다시 100원의 가격을 받을 수 있음
+* 중간에 0원까지 단가가 내려갈 경우 그 전날까지의 하루 평균 매출을 출력
+
+
+### 입력 조건
+
+* 첫째 줄에 정수 `N` 이 주어짐(1 ≤ N ≤ 1,000)
+* 둘째 줄에 정수 배열 `P`의 원소 N개가 공백을 사이에 두고 주어짐. (1 ≤ a ≤ 100, a ∈ P)
+* 셋째 줄에 정수 배열 `C`의 원소 N개가 공백을 사이에 두고 주어짐. (1 ≤ b ≤ 100, b ∈ C)
+
+### 출력 조건
+하루 평균 매출을 소수점 이하 3자리에서 반올림해서, 2자리까지 출력
+
+## 입출력 예시
+|No| 입력 예시| 출력 예시|
+| -- |:-----------------------------------:| -----:|
+| 1 | 7 <br>3 4 3 4 5 0 2<br> 1 5 3 2 6 3 2| 265.71|
+| 2 | 5 <br>   2 3 3 2 1   <br> 1 4 4 1 1  | 136.00|
+<br>
+
+### 나의 풀이
+
+**변수**
+- stock : 재고
+- day : 거래일 수
+- price : 단가
+- earn : 매상
+
+```python
+def solution(days):
+    products = list(map(int, input().split()))
+    orders = list(map(int, input().split()))
+    stock, day, earn = 0, 0, 0
+    price = 100
+
+    for order, product in zip(orders, products):
+        stock += product
+        if stock >= order:
+            totalPrice = price*order
+            stock, order = (stock-order), 0
+            earn += totalPrice
+            price = 100
+        else:
+            price -= 20
+        if price == 0:
+            break
+        day+=1
+
+    return print(f"{earn/day:.2f}")
+```
+<!--{: .nolineno}-->
+<!--{: file="path/to/file" }-->
+
+도매상이 주문한 것도 누적되는줄 알고 zip을 썼다가 자꾸 결과가 달라서 zip을 쓴 채로 수정했는데 굳이 zip을 쓰지 않아도 될 듯.
+
