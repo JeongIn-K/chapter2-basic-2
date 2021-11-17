@@ -3,7 +3,7 @@ layout: page
 title: About
 ---
 
-<img src="https://github.com/joniekwon/joniekwon.github.io/blob/main/img/self.jpg?raw=true" width="auto" height="auto" style="border-radius:50%" align="left">
+<img src="https://github.com/joniekwon/joniekwon.github.io/blob/main/img/self.jpg?raw=true" width="auto" height="auto" style="border-radius:50%" align="bottom">
 
 <h1>JeongIn Kwon</h1>
 
@@ -16,21 +16,22 @@ title: About
 
 백엔드, 머신러닝, 딥러닝, 컴퓨터 비전, 빅데이터 분석
 
+
 ##스킬
 
 Python, R, SQL, C++, Java, HTML/CSS etc.
 
 ```mermaid
- gantt
-  title  Skills that I experienced
-  dateFormat  YYYY-MM
-  C++ : 2017-04, 220w
-  Python :active, 2018-07, 177w
-  Java,R :active, 2021-09, 12w
-  Node.js, javascript, mySQL: 2017-03, 12w
-  C, HTML/CSS, mySQL: 2013-09, 24w
-  HTML/CSS: 2021-09, 12w
-  SQL:active, 2020-09, 64w
+	gantt
+        title  Skills that I experienced
+        dateFormat  YYYY-MM
+        C++ : 2017-04, 220w
+        Python :active, 2018-07, 177w
+        Java,R :active, 2021-09, 12w
+        Node.js, javascript, mySQL: 2017-03, 12w
+        C, HTML/CSS, mySQL: 2013-09, 24w
+        HTML/CSS: 2021-09, 12w
+        SQL:active, 2020-09, 64w
 ```
 
 ##연구경험
