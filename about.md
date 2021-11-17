@@ -3,7 +3,7 @@ layout: page
 title: About
 ---
 
-<img src="https://github.com/joniekwon/joniekwon.github.io/blob/main/img/self.jpg?raw=true" width="auto" height="auto" style="border-radius:50%" align="bottom">
+![myPhoto]("./img/self.jpg" width="auto" height="auto" style="border-radius:50%" align="bottom")
 
 <h1>JeongIn Kwon</h1>
 
