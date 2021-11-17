@@ -1,6 +1,7 @@
 ---
 layout: page
 title: About
+math: true
 mermaid: true
 ---
 
@@ -20,17 +21,17 @@ Python, SQL, C/C++, Java, R, HTML/CSS
 > API/Library : OpenCV, Tensorflow, Keras  etc.
 
 ```mermaid
-gantt
-    title  Skills that I experienced
-    dateFormat  YYYY-MM
+ gantt
+  title  Skills that I experienced
+  dateFormat  YYYY-MM
 
-    Node.js, javascript, mySQL: done, 2017-09, 2w
-    C++ : 2017-09, 182w
-    R : 2021-07, 6w
-    Python : crit, 2018-11, 161w
-    Java/Spring: active, 2021-07, 22w
-    HTML/CSS: active, 2021-07, 22w
-    SQL: active, 2021-07, 22w
+  Node.js, javascript, mySQL: done, 2017-09, 2w
+  C++ : 2017-09, 182w
+  R : 2021-07, 6w
+  Python : crit, 2018-11, 161w
+  Java/Spring: active, 2021-07, 22w
+  HTML/CSS: active, 2021-07, 22w
+  SQL: active, 2021-07, 22w
 ```
 
 ## &#128221; 연구경험
