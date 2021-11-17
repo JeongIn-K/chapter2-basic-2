@@ -23,13 +23,14 @@ Python, R, SQL, C++, Java, HTML/CSS etc.
 
 ```mermaid
 	gantt
-        title  Skills that I experienced
+		title  Skills that I experienced
         dateFormat  YYYY-MM
+
         C++ : 2017-04, 220w
         Python :active, 2018-07, 177w
         Java,R :active, 2021-09, 12w
-        Node.js, javascript, mySQL: 2017-03, 12w
-        C, HTML/CSS, mySQL: 2013-09, 24w
+        Node.js, javascript, mySQL: done, 2017-03, 12w
+        C, HTML/CSS, mySQL: done, 2013-09, 24w
         HTML/CSS: 2021-09, 12w
         SQL:active, 2020-09, 64w
 ```
@@ -45,4 +46,4 @@ Python, R, SQL, C++, Java, HTML/CSS etc.
 |  취득일  |     자격증     |     발급기관     |
 |:-------:|:-------------:|:---------------:|
 | 2020.12.|   정보처리기사  |  한국산업인력공단 |
-<!--| 취득예정 | 빅데이터분석기사 |한국데이터산업진흥원|-->
+
