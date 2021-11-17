@@ -3,33 +3,33 @@ layout: page
 title: About
 ---
 
-<img src="https://github.com/joniekwon/joniekwon.github.io/blob/main/img/self.jpg?raw=true" width="auto" height="auto" style="border-radius:50%" align="left">
+![](/img/self.jpg){: .left}
 
 <h1>JeongIn Kwon</h1>
 
-##학력
+## 학력
 
 2017.08. ~ 2020.02. 국립한밭대학교 정보통신대학원 멀티미디어공학과 석사
 2009.03. ~ 2014.02. 국립한밭대학교 산업경영공학과
 
-##관심분야
+## 관심분야
 
 백엔드, 머신러닝, 딥러닝, 컴퓨터 비전, 빅데이터 분석
 
 
-##스킬
+## 스킬
 
 Python, R, SQL, C++, Java, HTML/CSS etc.
 ![SKILLS](/img/skills.png)
 _경험했던 기술들_
 
-##연구경험
+## 연구경험
 
 2017.09. ~ 2018.01. 원거리 무인비행체 EO/IR 영상분석 및 탐지/추적 알고리즘 연구
 2018.03. ~ 2018.11. 소형 표적 추적을 위한 알고리즘 성능 개선
 2019.04. ~ 2019.11. 환경 변화에 강인한 실시간 무인비행체 탐지/추적 알고리즘 연구
 
-##자격증
+## 자격증
 
 |  취득일  |     자격증     |     발급기관     |
 |:-------:|:-------------:|:---------------:|
