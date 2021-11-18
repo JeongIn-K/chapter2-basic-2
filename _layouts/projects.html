@@ -1,0 +1,36 @@
+---
+layout: default
+---
+<div class="project-container">
+  <h1>Projects</h1>
+  <!--<p> 프로젝트</p>-->
+  <br><center>
+  <a href="#"><span class="label label-danger">
+    {% include project-header.html %}
+  </span></a></center>
+</div>
+
+  <div class="container">
+    {% for project in paginator.projects %}
+    <div class="project-box">
+      <div class="row">
+        <div class="col-md-3 project-image">
+          <img src="http://lorempixel.com/g/400/400/">
+        </div>
+        <div class="col-md-9 project-post">
+          <h1 class="post-title">{{ page.title }}</h1>
+          <p class="meta">
+            <small>&nbsp;<i class="fa fa-calendar-o"></i> {{ project.date | date_to_string }} </small>
+          </p><hr/>
+          <div class="post">
+            {{ content }} 
+            <br>
+            {% if page.tags %}
+            {% include post-tags.html %}
+            {% endif %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
