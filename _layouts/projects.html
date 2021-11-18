@@ -1,17 +1,18 @@
 ---
 layout: default
 ---
+
 <div class="project-container">
   <h1>Projects</h1>
   <!--<p> 프로젝트</p>-->
   <br><center>
   <a href="#"><span class="label label-danger">
-    {% include project-header.html %}
+    {% include home-header.html %}
   </span></a></center>
 </div>
 
   <div class="container">
-    {% for item in paginator.projects %}
+    {% for project in paginator.projects %}
     <div class="project-box">
       <div class="row">
         <div class="col-md-3 project-image">
