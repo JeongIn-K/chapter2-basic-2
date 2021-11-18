@@ -1,6 +1,6 @@
 - title: Blog
   url: /
 - title: Project
-  herf: /_layout/project.html
+  herf: /projects/
 - title: About
   url: /about/
