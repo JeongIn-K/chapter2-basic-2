@@ -7,9 +7,3 @@
 - type: tags
   title: Tags
   url: /tags/
-#- type: categories
-#  title: Categories
-#  url: /categories/
-- type: categories
-  title: Categories
-  url: /categories/
