@@ -1,7 +1,7 @@
-<div class="project-header pure-menu pure-menu-horizontal">
-  <div class="project-header-bar">
+<div class="home-header pure-menu pure-menu-horizontal">
+  <div class="home-header-bar">
     {% if site.data.project %}
-    <ul class="project-header-menu pure-menu-list">
+    <ul class="home-header-menu pure-menu-list">
       {% for item in site.data.project %}
         <li class="pure-menu-item">
           <a href="{{ item.url | relative_url }}" class="pure-menu-link {% if page.url == item.url %}current-item{% endif %}"">{{ item.title }}</a>
