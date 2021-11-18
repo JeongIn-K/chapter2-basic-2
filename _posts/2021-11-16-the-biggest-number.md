@@ -29,7 +29,6 @@ toc_sticky: true
 def solution(numbers):
     answer = list(sorted(([str(x) for x in numbers]), reverse=True))
     answer = ''.join(answer)
-    print(answer)
     return answer
 ```
 
@@ -71,7 +70,6 @@ def solution(numbers):
     value = []
     for key in sorted(answer.keys(), reverse=True):
         value += sorted(answer[key], reverse=True)
-    print(answer)
     answer = ''.join([str(x) for x in value])
     return answer
 ```
@@ -98,7 +96,6 @@ numbers = [str(x)*3 for x in numbers]
 def solution(numbers):
     answer = list(sorted(([str(x) for x in numbers]), reverse=True, key=lambda x:x*3))
     answer = ''.join(answer)
-    print(answer)
     return answer
 ```
 `key=lambda x:x*3` 만 추가하면 되는거였다 ^_T 또로록.... 정말 재밌다 파이썬.
