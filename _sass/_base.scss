@@ -8,7 +8,7 @@
 
 body {
   margin: 0;
-  font-family: "Elice Digital Baeum",sans-serif;
+  font-family: var(--code-font);
   font-size: var(--body-font-size);
   line-height: var(--body-line-height);
   color: var(--body-color);
