@@ -1,6 +1,6 @@
 ---
 title: 로또의 최고 순위와 최저 순위
-excerpt: count(), 교집합 intersecton()
+excerpt: 프로그래머스 코딩테스트 연습 Level 1
 date: 2021-11-13 14:10:00 +0800
 categories: [코테연습, python3]
 tags: [코딩테스트, 프로그래머스(Level1)]
