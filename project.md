@@ -40,7 +40,7 @@ tags: [Projects]
 ## 소형 표적 추적을 위한 알고리즘 성능 개선
 > 2018.03.01 ~ 2018.11.30
 
-## 주요 내용
+### 주요 내용
 1. Object Tracking Method 조사 및 알고리즘 분석
 2. 직접 구현 또는 Github에서 찾은 Tracker를 실험 영상에 적용, 결과 분석
 
@@ -87,7 +87,7 @@ tags: [Projects]
 > 2017.09.01 ~ 2017.11.30
 
 ### 주요 내용
-![](/img/server-client.png)
+![](/img/server-client.png width="450" height="200")
 1.  NFC 태깅으로 동작하는 웹 개발
 2.  모바일 주문 웹, 웹 서버구축, Client 통신모듈 탑재
 
