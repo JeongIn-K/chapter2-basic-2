@@ -57,3 +57,10 @@ author:
   name: Jonie Kwon
   url: https://github.com/joniekwon
   email: kkkji1215@naver.com
+
+markdown: kramdown
+kramdown:
+    highlighter: rouge
+    syntax_highlighter_opts:
+        block:
+            line_numbers: true

@@ -3,7 +3,7 @@ title: 완주하지 못한 선수
 excerpt: Key-Value쌍으로 데이터를 빠르게 찾아보자. hash()
 date: 2021-11-14 14:10:00 +0800
 categories: [코테연습, python3]
-tags: [코딩테스트, 프로그래머스(Level1), 해시]
+tags: [코딩테스트, 프로그래머스Level1, 해시]
 toc: true
 ---
 

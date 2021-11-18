@@ -3,7 +3,7 @@ title: 숫자 문자열과 영단어
 excerpt: 문자열과 replace()
 date: 2021-11-13 14:10:00 +0800
 categories:  [코테연습, python3]
-tags: [코딩테스트, 프로그래머스(Level1)]
+tags: [코딩테스트, 프로그래머스Level1]
 toc: true
 toc_sticky: true
 ---
