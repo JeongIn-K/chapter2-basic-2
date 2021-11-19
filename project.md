@@ -30,10 +30,10 @@ tags: [Projects]
 
 ### 스택
 
-![stack](img/logos/pjt1.png){: width="auto" height="70" }
+![stack](img/logos/pjt1.png)
 
 ### OS
-![os](img/logos/win_ubuntu.png){: width="auto" height="70" }
+![os](img/logos/os.png)
 
 ### 결과 및 성과
 - 딥러닝 탐지 네트워크 동향 및 구조 파악
@@ -55,10 +55,10 @@ tags: [Projects]
 - Github의 Spatiogram+Particle Filtering 코드 분석 및 추적 성능 개선
 
 ### 스택
-![stack](img/logos/pjt2.png){: width="auto" height="70" }
+![stack](img/logos/pjt2.png)
 
 ### OS
-![Windows](img/logos/windows.png){: width="auto" height="70" }
+![Windows](img/logos/windows.png)
 
 ### 결과 및 성과
 - 논문 2편 (IPIU, ICFICE)
@@ -92,7 +92,7 @@ tags: [Projects]
 > &#128198; 2017.09.01 ~ 2017.11.30
 
 ### 주요 내용
-![](/img/server-client.png){: width="auto" height="200" }
+![](/img/server-client.png)
 1.  NFC 태깅으로 동작하는 웹 개발
 2.  모바일 주문 웹, 웹 서버구축, Client 통신모듈 탑재
 
@@ -101,10 +101,10 @@ tags: [Projects]
 - NFC태깅 후 구동되는 모바일 주문 웹 제작
 
 ### 스택
-![stack](img/logos/pjt3.png){: width="auto" height="70" }
+![stack](img/logos/pjt3.png)
 
 ### OS
-![Windows](img/logos/windows.png){: width="auto" height="70" }
+![Windows](img/logos/windows.png)
 
 ### 결과 및 성과
 - 모바일 웹 개발 경험
