@@ -7,8 +7,12 @@ last_modified_at: 2021-11-18 14:58:00 +0800
 toc: true
 tags: [Projects]
 ---
-## 환경 변화에 강인한 실시간 무인 비행체 탐지/추적 알고리즘 연구
-> 2019.04.15 ~ 2019.11.30
+> 정리중 입니다!
+<!-- &#128161; 전구 &#128198; 달력 &#127757; 지구 &#128204 고정핀 &#128200~1;상승,하락그래프 &#128202;히스토그램 &#128194; 폴더-->
+
+
+## &#128161; 환경 변화에 강인한 실시간 무인 비행체 탐지/추적 알고리즘 연구
+> &#128198; 2019.04.15 ~ 2019.11.30
 
 ### 주요 내용
 1. 딥러닝 탐지 네트워크의 성능 개선을 위한 드론 이미지 데이터 세트 생성
@@ -24,11 +28,11 @@ tags: [Projects]
 - Boost 라이브러리를 이용하여 Visual Studio(C++)로 구현되어있는 Tracker와 Tensorflow로 구현되어있는 Detector를 연동
 - 영상 시퀀스의 연속적인 특성(드론의 이동거리 및 크기)을 이용하여 Detector의 탐지 결과 중 오검출 판단하는 후처리 알고리즘 작성(C++)
 
-### 스택
-- Python, C++, Tensorflow, Keras, Boost, OpenCV
+### 스킬
+- ![Python](img/logos/python.png) ![C++](img/logos/cpp.png) ![Tensorflow](img/logos/tensorflow.png) ![Keras](img/logos/keras.jpg) ![Boost](img/logos/boost.png){: width="260" height="80" } ![OpenCV](img/logos/opencv.png){: width="75" height="90" }
 
 ### OS
-- Ubuntu, Windows
+- ![Ubuntu](img/logos/ubuntu.png) ![Windows](img/logos/windows.png)
 
 ### 결과 및 성과
 - 딥러닝 탐지 네트워크 동향 및 구조 파악
@@ -37,8 +41,8 @@ tags: [Projects]
 
 ***
 
-## 소형 표적 추적을 위한 알고리즘 성능 개선
-> 2018.03.01 ~ 2018.11.30
+## &#128161; 소형 표적 추적을 위한 알고리즘 성능 개선
+> &#128198; 2018.03.01 ~ 2018.11.30
 
 ### 주요 내용
 1. Object Tracking Method 조사 및 알고리즘 분석
@@ -50,10 +54,10 @@ tags: [Projects]
 - Github의 Spatiogram+Particle Filtering 코드 분석 및 추적 성능 개선
 
 ### 스택
-- C++, OpenCV
+- ![C++](img/logos/cpp.png)![OpenCV](img/logos/opencv.png){: width="75" height="90" } ![Python](img/logos/python.png) ![Tensorflow](img/logos/tensorflow.png)
 
 ### OS
-- Windows
+- ![Windows](img/logos/windows.png)
 
 ### 결과 및 성과
 - 논문 2편 (IPIU, ICFICE)
@@ -64,8 +68,8 @@ tags: [Projects]
 ***
 
 
-## 환경 변화에 강인한 실시간 무인비행체 탐지/추적 알고리즘 연구
-> 2017.09.01 ~ 2017.11.30
+## &#128161; 환경 변화에 강인한 실시간 무인비행체 탐지/추적 알고리즘 연구
+> &#128198; 2017.09.01 ~ 2017.11.30
 
 
 ### 주요 내용
@@ -83,8 +87,8 @@ tags: [Projects]
 ***
 
 
-## NFC 구동 웹 애플리케이션 개발
-> 2017.09.01 ~ 2017.11.30
+## &#127757; NFC 구동 웹 애플리케이션 개발
+> &#128198; 2017.09.01 ~ 2017.11.30
 
 ### 주요 내용
 ![](/img/server-client.png width="450" height="200")
@@ -96,10 +100,10 @@ tags: [Projects]
 - NFC태깅 후 구동되는 모바일 주문 웹 제작
 
 ### 스택
-- Node.js, JavaScript, SQL
+- ![Node.js](img/logos/nodejs.png) ![JavaScript](img/logos/js.png) ![SQL](img/logos/mysql.png)
 
 ### OS
-- Windows
+- ![Windows](img/logos/windows.png)
 
 ### 결과 및 성과
 - 모바일 웹 개발 경험
