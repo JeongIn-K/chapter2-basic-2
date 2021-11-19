@@ -85,20 +85,24 @@ def solution(numbers):
 
 
 ```python
-numbers = [str(x)*3 for x in numbers]
-```
->오, 그래서 이렇게 하면 되는거구나? 근데... 
-> [666, 101010, 222] 는... 어떻게... 다시 원래 원소로 바꾸나요 ㅠㅠ
-  
-여기서 막혀서 다시 다른 사람의 풀이를 봤더니 sorted 함수에 key값을 넣어 정렬 기준을 만들어 정렬하는 방법을 사용하였다. 그러니까 결국, 내 처음 풀이에서
+def solution2(numbers):
+    numbers = [str(x)*3 for x in numbers]
 
+	answer = list(sorted(([str(x) for x in numbers]), reverse=True))
+    for i, num in enumerate(answer):
+        answer[i] = num[:int(len(num)/3)]
+    answer = ''.join(answer)
+    return answer
+```
+
+### 다른 사람 풀이
 ```python
 def solution(numbers):
     answer = list(sorted(([str(x) for x in numbers]), reverse=True, key=lambda x:x*3))
     answer = ''.join(answer)
     return answer
 ```
-`key=lambda x:x*3` 만 추가하면 되는거였다 ^_T 또로록.... 정말 재밌다 파이썬.
+> 다른 사람의 풀이를 보니 sorted 함수에 key값을 넣어 정렬 기준을 만들어 정렬하는 방법을 사용하였다. 그러니까 결국 내 처음 풀이에서`key=lambda x:x*3` 만 추가하면 되는거였다 ^_T 또로록.... 정말 재밌다 파이썬.
 
 +추가
 원소가 `[0, 0, 0]` 일 때 string으로 그냥 반환하면 `000`이 되므로 `0`을 반환하도록 바꿔줘야 통과. (11번 케이스가 0만 나오는 듯 하다.)
