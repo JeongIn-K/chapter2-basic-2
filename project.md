@@ -28,11 +28,12 @@ tags: [Projects]
 - Boost 라이브러리를 이용하여 Visual Studio(C++)로 구현되어있는 Tracker와 Tensorflow로 구현되어있는 Detector를 연동
 - 영상 시퀀스의 연속적인 특성(드론의 이동거리 및 크기)을 이용하여 Detector의 탐지 결과 중 오검출 판단하는 후처리 알고리즘 작성(C++)
 
-### 스킬
-- ![Python](img/logos/python.png) ![C++](img/logos/cpp.png) ![Tensorflow](img/logos/tensorflow.png) ![Keras](img/logos/keras.jpg) ![Boost](img/logos/boost.png){: width="260" height="80" } ![OpenCV](img/logos/opencv.png){: width="75" height="90" }
+### 스택
+
+![stack](img/logos/pjt1.png)
 
 ### OS
-- ![Ubuntu](img/logos/ubuntu.png) ![Windows](img/logos/windows.png)
+![os](img/logos/win_ubuntu.png)
 
 ### 결과 및 성과
 - 딥러닝 탐지 네트워크 동향 및 구조 파악
@@ -54,7 +55,7 @@ tags: [Projects]
 - Github의 Spatiogram+Particle Filtering 코드 분석 및 추적 성능 개선
 
 ### 스택
-- ![C++](img/logos/cpp.png)![OpenCV](img/logos/opencv.png){: width="75" height="90" } ![Python](img/logos/python.png) ![Tensorflow](img/logos/tensorflow.png)
+![stack](img/logos/pjt2.png)
 
 ### OS
 - ![Windows](img/logos/windows.png)
@@ -100,7 +101,7 @@ tags: [Projects]
 - NFC태깅 후 구동되는 모바일 주문 웹 제작
 
 ### 스택
-- ![Node.js](img/logos/nodejs.png) ![JavaScript](img/logos/js.png) ![SQL](img/logos/mysql.png)
+- ![stack](img/logos/pjt3.png)
 
 ### OS
 - ![Windows](img/logos/windows.png)
