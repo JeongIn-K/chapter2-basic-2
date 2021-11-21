@@ -91,7 +91,7 @@ def solution(progresses, speeds):
 
 ***
 
-### 다른 풀이1
+### 다른 풀이1 ☆☆☆
 ```python
 def solution(progresses, speeds):
     Q=[]
