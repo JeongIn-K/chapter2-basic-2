@@ -58,7 +58,7 @@ print(sorted_students)
 즉, x의 첫번째는 0: key, 1:value를 나타내고 두번째는 value중에서 n 번째 인덱스를 의미
 
 ```python
-studemts = {'azad': (4.19, 4), 'andy': (3.77, 5), 'louis': (4.41, 4), 'will': (3.65, 4), 'edward': (3.58, 5)}
+students = {'azad': (4.19, 4), 'andy': (3.77, 5), 'louis': (4.41, 4), 'will': (3.65, 4), 'edward': (3.58, 5)}
 students_sorted = dict(sorted(students.items(), key=lambda x: x[1][0], reverse=True))
 students_sorted = dict(sorted(students.items(), key=lambda x: x[1][1], reverse=True))
 ```
@@ -69,7 +69,7 @@ students_sorted = dict(sorted(students.items(), key=lambda x: x[1][1], reverse=T
 * 두가지 조건을 동시에 넣을 수도 있음
 
 ```python
-studemts = {'azad': (4.19, 4), 'andy': (4.19, 5), 'louis': (4.41, 4), 'will': (3.65, 4), 'edward': (3.58, 5)}
+students = {'azad': (4.19, 4), 'andy': (4.19, 5), 'louis': (4.41, 4), 'will': (3.65, 4), 'edward': (3.58, 5)}
 students_sorted = dict(sorted(students.items(), key=lambda x: (x[1][0],x[1][1]), reverse=True))
 ```
 > {'louis': (4.41, 4), 'andy': (4.19, 5), 'azad': (4.19, 4), 'will': (3.65, 4), 'edward': (3.58, 5)}
