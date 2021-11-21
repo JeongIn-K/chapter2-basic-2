@@ -33,7 +33,7 @@ print(sorted_students)
 >['will', 'louis', 'edward', 'azad', 'andy']
 
 <br>
-* n정렬된 **key, value 모두 뽑으려면 dict.items()**를 정렬해야 함.
+* 정렬된 **key, value 모두 뽑으려면 dict.items()**를 정렬해야 함.
 
 ```python
 sorted_list = sorted(dict.items(), key=lambda x:x[0])
@@ -85,4 +85,4 @@ print(students_sorted)
 ```
 > {'andy': (4.19, 5), 'azad': (4.19, 4), 'louis': (4.41, 4), 'edward': (3.58, 5), 'will': (3.65, 4)}
 
-
+* 정렬기준마다 reverse 따로 적용하는 방법은 없을까 궁금하다.
