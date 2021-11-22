@@ -1,0 +1,82 @@
+---
+title: 다리를 지나는 트럭
+excerpt:
+date: 2021-11-21 22:01:00 +0800
+categories: [코테연습, python3]
+tags: [프로그래머스Level2, 스택/큐]
+toc: true
+toc_sticky: true
+---
+
+### 문제
+* 트럭 여러 대가 강을 가로지르는 일차선 다리를 정해진 순으로 건너려 합니다. 모든 트럭이 다리를 건너려면 최소 몇 초가 걸리는지 알아내야 합니다. 다리에는 트럭이 최대 bridge_length대 올라갈 수 있으며, 다리는 weight 이하까지의 무게를 견딜 수 있습니다. 단, 다리에 완전히 오르지 않은 트럭의 무게는 무시합니다.
+* solution 함수의 매개변수로 다리에 올라갈 수 있는 트럭 수 bridge_length, 다리가 견딜 수 있는 무게 weight, 트럭 별 무게 truck_weights가 주어집니다. 이때 모든 트럭이 다리를 건너려면 최소 몇 초가 걸리는지 return 하도록 solution 함수를 완성하세요.
+
+### 첫 번째 풀이
+> 테스트 1만 넘어감
+
+
+```python
+def solution(bridge_length, weight, truck_weights):
+    time = 0
+    q = deque()
+    i = 0
+    truck_weights = deque(truck_weights)
+    while len(truck_weights)>0:
+        if len(q) < bridge_length and sum(q)[1]+truck_weights[i]<=weight:
+            q.append(truck_weights[i])
+            truck_weights.popleft()
+            time+=1
+        else:
+            q.popleft()
+            time+=1
+    return time+1
+```
+> 문제에 1초에 1 length 만큼 지나갈수 있다는 설명이 빠져있어서 한참 헤맸다<br>
+> 테스트 케이스 2,3 답이 너무 이상해서 질문하기 들어가보니 ㅠㅠ 우쒸 내 시간..<br>
+
+
+### 두 번째 풀이
+
+```python
+def solution(bridge_length, weight, truck_weights):
+    time = 0
+    bridge = deque()
+    for _ in range(bridge_length):
+         bridge.append(0)
+
+    while len(truck_weights) > 0 or sum(bridge):
+        bridge.popleft()
+        time += 1
+        if truck_weights:
+            if sum(bridge) + truck_weights[0] <= weight:
+                bridge.append(truck_weights[0])
+                truck_weights.pop(0)
+            else:
+                bridge.append(0)
+    return time
+```
+> 실행 결과<br>
+> 테스트 1 〉	통과 (28.25ms, 10.2MB)<br>
+> 테스트 2 〉	통과 (2023.54ms, 10.3MB)<br>
+> 테스트 3 〉	통과 (0.06ms, 10.2MB)<br>
+> 테스트 4 〉	통과 (383.99ms, 10.2MB)<br>
+> 테스트 5 〉	실패 (시간 초과)<br>
+> 테스트 6 〉	통과 (2322.42ms, 10.3MB)<br>
+> 테스트 7 〉	통과 (7.34ms, 10.3MB)<br>
+> 테스트 8 〉	통과 (0.46ms, 10.4MB)<br>
+> 테스트 9 〉	통과 (5.46ms, 10.2MB)<br>
+> 테스트 10 〉	통과 (0.28ms, 10.3MB)<br>
+> 테스트 11 〉	통과 (0.01ms, 10.3MB)<br>
+> 테스트 12 〉	통과 (0.45ms, 10.3MB)<br>
+> 테스트 13 〉	통과 (1.93ms, 10.3MB)<br>
+> 테스트 14 〉	통과 (0.12ms, 10.2MB)<br>
+
+* 띠용 이렇게 푸는게 아닌가..;;
+
+***
+
+
+### 배운 것
+* 시간 줄이는 건 내일 다시 해봐야지.. ㅠ deque, queue 공부
+* class로 만들어보기.
