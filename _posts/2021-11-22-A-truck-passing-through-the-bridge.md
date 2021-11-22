@@ -56,6 +56,7 @@ def solution(bridge_length, weight, truck_weights):
                 bridge.append(0)
     return time
 ```
+> 띠용 이렇게 푸는게 아닌가..;;<br>
 > 실행 결과<br>
 > 테스트 1 〉	통과 (28.25ms, 10.2MB)<br>
 > 테스트 2 〉	통과 (2023.54ms, 10.3MB)<br>
@@ -72,8 +73,11 @@ def solution(bridge_length, weight, truck_weights):
 > 테스트 13 〉	통과 (1.93ms, 10.3MB)<br>
 > 테스트 14 〉	통과 (0.12ms, 10.2MB)<br>
 
-* 띠용 이렇게 푸는게 아닌가..;;
-
+* line 3~5) 1초에 1 length 만큼 지나가도록 하기 위해 0으로 채운 bridge 만듦.<br>
+* line 7) `len(truck_weight)>0` 대기중인 트럭이 있거나 `sum(bridge)` 다리에 트럭이 있으면  루프 반복
+* line 8~9) 제일 앞의 큐 제거하고 시간 증가
+* line 10~15) 현재 다리에 있는 트럭들의 무게랑 포함할 트럭무게 합이 제한하중 이하면 포함 아니면 대기`bridge.append(0)`
+* .....pop()때문인가 싶어서 popleft()했는데 그대로 시간 초과. 이렇게 푸는게 아닌가보다..
 ***
 
 
