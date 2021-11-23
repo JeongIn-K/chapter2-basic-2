@@ -3,7 +3,7 @@ title: 로또의 최고 순위와 최저 순위
 excerpt: count(), 교집합 intersecton()
 date: 2021-11-13 14:10:00 +0800
 categories: [코테연습, python3]
-tags: [코딩테스트, 프로그래머스Level1]
+tags: [프로그래머스Level1]
 toc: true
 toc_sticky: true
 ---

@@ -3,7 +3,7 @@ title: 키패드 누르기
 excerpt: 키패드를 어떤 손으로 누를까?
 date: 2021-11-15 11:15:00 +0800
 categories: [코테연습, python3]
-tags: [코딩테스트, 프로그래머스Level1]
+tags: [프로그래머스Level1]
 toc: true
 toc_sticky: true
 ---

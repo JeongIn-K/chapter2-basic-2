@@ -3,7 +3,7 @@ title:  "과수원"
 excerpt: "코딩 테스트 연습 - 네이버 기출 변형"
 date: 2021-11-12 14:10:00 +0800
 categories: [코테연습, python3]
-tags: [코딩테스트, 네이버기출]
+tags: [네이버기출]
 toc: true
 toc_sticky: true
 ---

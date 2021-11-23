@@ -3,7 +3,7 @@ title: 기능개발
 excerpt:
 date: 2021-11-20 23:39:00 +0800
 categories: [코테연습, python3]
-tags: [코딩테스트, 프로그래머스Level2, 스택/큐, lambda]
+tags: [프로그래머스Level2, 스택/큐, lambda]
 toc: true
 toc_sticky: true
 ---

@@ -3,7 +3,7 @@ title: 가장 큰 수
 excerpt: 숫자를 조합해서 가장 큰 수를 만들어 보자
 date: 2021-11-16 10:15:00 +0800
 categories: [코테연습, python3]
-tags: [코딩테스트, 프로그래머스Level2, 정렬, lambda]
+tags: [프로그래머스Level2, 정렬, lambda]
 toc: true
 toc_sticky: true
 ---

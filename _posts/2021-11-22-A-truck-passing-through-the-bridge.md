@@ -77,12 +77,73 @@ def solution(bridge_length, weight, truck_weights):
 * line 7) `len(truck_weight)>0` 대기중인 트럭이 있거나 `sum(bridge)` 다리에 트럭이 있으면  루프 반복
 * line 8~9) 제일 앞의 큐 제거하고 시간 증가
 * line 10~15) 현재 다리에 있는 트럭들의 무게랑 포함할 트럭무게 합이 제한하중 이하면 포함 아니면 대기`bridge.append(0)`
-* ......pop()때문인가 싶어서 popleft()했는데 그대로 시간 초과. 이렇게 푸는게 아닌가보다..
+* ......pop()때문인가 싶어서 popleft()했는데 그대로 시간 초과. 이렇게 푸는게 아닌가보다..<br>
+
+```python
+from collections import deque
+
+class Bridge(object):
+
+    def __init__(self, bridge_length, weight):
+        self.bridge_length = bridge_length
+        self.max_weight = weight
+        self.current_weight = 0
+        self.bridge = deque([0]*bridge_length)
+
+    def enqueue(self,truck):
+        if self.current_weight+truck <= self.max_weight:
+            self.bridge.append(truck)
+            self.current_weight += truck
+            return False
+        else:
+            self.bridge.append(0)
+            return True
+
+    def deque(self):
+        truck = self.bridge.popleft()
+        self.current_weight -= truck
+
+    def _print(self):
+        print(f"Q: {self.bridge}")
+        print(f"current_weight/max_weight: {self.current_weight}/{self.max_weight}")
+
+def solution(bridge_length, weight, truck_weights):
+    time = 0
+    bridge = Bridge(bridge_length,weight)
+    truck_weights = deque(truck_weights)
+    while truck_weights or sum(bridge.bridge):
+        bridge.deque()
+        time+=1
+        if truck_weights:
+            waitTruck = bridge.enqueue(truck_weights[0])
+            if not waitTruck:
+                truck_weights.popleft()
+        #bridge._print()
+    return time
+```
 
 
+* 첨부터 클래스로 만들려고 할때는 넘 어려웠는데 짰던 코드 보면서 하니까 금방 만들었다 뿌듯..<br>
+* 클래스로 만드니 속도가 엄청 빨라졌다;; 별 차이 없을 줄 알았는데.. 웬만하면 클래스로 짜려고 노력해야겠다<br>
+
+
+> 테스트 1 〉	통과 (7.41ms, 10.3MB)<br>
+> 테스트 2 〉	통과 (210.05ms, 10.4MB)<br>
+> 테스트 3 〉	통과 (0.04ms, 10.3MB)<br>
+> 테스트 4 〉	통과 (24.24ms, 10.4MB)<br>
+> 테스트 5 〉	통과 (207.72ms, 10.4MB)<br>
+> 테스트 6 〉	통과 (71.23ms, 10.3MB)<br>
+> 테스트 7 〉	통과 (1.98ms, 10.2MB)<br>
+> 테스트 8 〉	통과 (0.18ms, 10.3MB)<br>
+> 테스트 9 〉	통과 (4.61ms, 10.4MB)<br>
+> 테스트 10 〉	통과 (0.21ms, 10.3MB)<br>
+> 테스트 11 〉	통과 (0.01ms, 10.3MB)<br>
+> 테스트 12 〉	통과 (0.34ms, 10.4MB)<br>
+> 테스트 13 〉	통과 (1.35ms, 10.2MB)<br>
+> 테스트 14 〉	통과 (0.07ms, 10.3MB)<br>
 ***
 
-
 ### 배운 것
-* 시간 줄이는 건 내일 다시 해봐야지.. ㅠ deque, queue 공부
-* class로 만들어보기.
+* ~~시간 줄이는 건 내일 다시 해봐야지.. ㅠ~~ <br>
+* deque, queue 공부<br>
+* ~~class로 만들어보기~~ 완성! 굿굿<br>
