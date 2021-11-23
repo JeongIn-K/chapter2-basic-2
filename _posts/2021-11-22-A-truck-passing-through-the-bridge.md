@@ -79,6 +79,8 @@ def solution(bridge_length, weight, truck_weights):
 * line 10~15) 현재 다리에 있는 트럭들의 무게랑 포함할 트럭무게 합이 제한하중 이하면 포함 아니면 대기`bridge.append(0)`
 * ......pop()때문인가 싶어서 popleft()했는데 그대로 시간 초과. 이렇게 푸는게 아닌가보다..<br>
 
+<br>
+### 클래스 사용한 풀이
 ```python
 from collections import deque
 
