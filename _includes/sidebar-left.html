@@ -18,16 +18,11 @@
   {%- if site.data.navigation -%}
   <nav class="navigation">
     <ul class="navigation-list">
+    {%- for nav in site.data.navigation -%}
       <li class="navigation-item">
-        <a onclick="sessionStorage.setItem('forceCheckScroll', 'true')" href="/">Blog</a>
-      </li>#
-      <li class="navigation-item">
-        <a onclick="sessionStorage.setItem('forceCheckScroll', 'true')" href="{{ site.baseurl }}/project.html">Pojects</a>
+        <a onclick="sessionStorage.setItem('forceCheckScroll', 'true')" href="{{ nav.url | relative_url }}">{{ nav.title | escape }}</a>
       </li>
-      <li class="navigation-item">
-        <a onclick="sessionStorage.setItem('forceCheckScroll', 'true')" href="{{ site.baseurl }}/about">About</a>
-      </li>
-    
+    {%- endfor -%}
     </ul>
   </nav>
   {%- endif -%}

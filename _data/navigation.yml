@@ -2,7 +2,9 @@
   url: /
 - title: Projects
   url: /projects
-- title: Projects
-  url: https://joniekwon.pythonanywhere.com/
+- title: Projects2
+  url: /site/projects.html
+- title: Projects3
+  url: /site/projects  
 - title: About
   url: /about
