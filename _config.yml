@@ -1,7 +1,8 @@
 # Setup
 title: Jonie Learning
 description: I'm putting together my portfolio.
-url: https://github.com/joniekwon
+url: "https://joniekwon.github.io"
+baseurl: "projects"
 avatar: /img/avatar.JPG
 paginate: 5
 permalink: pretty
