@@ -2,7 +2,7 @@
 title: Jonie Learning
 description: I'm putting together my portfolio.
 url: "https://joniekwon.github.io"
-baseurl: "projects"
+baseurl: 
 avatar: /img/avatar.JPG
 paginate: 5
 permalink: pretty

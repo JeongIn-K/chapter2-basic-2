@@ -1,6 +1,8 @@
 - title: Blog
   url: /
 - title: Projects
-  url: /projects
+  url: /projects.html
+- title: Projects
+  url: https://joniekwon.pythonanywhere.com/
 - title: About
   url: /about
