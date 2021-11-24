@@ -44,6 +44,3 @@ node_modules
 
 # Ruby gems
 *.gem
-
-#tutorial
-tutorial/
