@@ -1,6 +1,6 @@
 ---
 layout: page
-permalink: /projects/
+permalink: /project/
 title: "Projects"
 excerpt: "projects.md"
 last_modified_at: 2021-11-18 14:58:00 +0800
