@@ -2,14 +2,11 @@
   title: Object D/T
   url: /projects/
 - type: 
-  title: BMS
-  url: /project_bms/
+  title: Sever-Client
+  url: /project_sc/
 - type: 
   title: Bigdata
   url: /project_bigdata/
-- type: 
-  title: Order Web
-  url: /project_order/  
 - type: 
   title: Practice
   url: /project_pratice/
