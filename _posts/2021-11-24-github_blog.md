@@ -13,7 +13,7 @@ toc_sticky: true
 ###  Jekyll에서 마음에 드는 테마를 찾는다 <br>
 Jekyll Themes : [http://jekyllthemes.org/](http://jekyllthemes.org/) <br>
 
-	**내가 고른 테마**<br>
+**내가 고른 테마**<br>
 	후보 1 [Herring Cove](https://github.com/arnp/herring-cove) <br>
 	후보 2 [chirpy](http://jekyllthemes.org/themes/jekyll-theme-chirpy/) <br>
 	후보 3 [Not Pure Poole](http://jekyllthemes.org/themes/not-pure-poole/) <br>
