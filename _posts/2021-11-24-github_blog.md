@@ -10,12 +10,13 @@ toc_sticky: true
 
 ## 깃허브 블로그 만들기 (feat. Jekyll Theme)
 <br>
-### [Jekyll Themes](http://jekyllthemes.org/) 에서 마음에 드는 테마를 찾는다 <br>
+###  Jekyll에서 마음에 드는 테마를 찾는다 <br>
+Jekyll Themes : [http://jekyllthemes.org/](http://jekyllthemes.org/) <br>
 
-**내가 고른 테마**<br>
-후보 1 [Herring Cove](https://github.com/arnp/herring-cove) <br>
-후보 2 [chirpy](http://jekyllthemes.org/themes/jekyll-theme-chirpy/) <br>
-후보 3 [Not Pure Poole](http://jekyllthemes.org/themes/not-pure-poole/) <br>
+	**내가 고른 테마**<br>
+	후보 1 [Herring Cove](https://github.com/arnp/herring-cove) <br>
+	후보 2 [chirpy](http://jekyllthemes.org/themes/jekyll-theme-chirpy/) <br>
+	후보 3 [Not Pure Poole](http://jekyllthemes.org/themes/not-pure-poole/) <br>
 	
 * 테마 고를 때 중요하게 생각 한 것 
 	* 심플한 것<br>
@@ -52,7 +53,7 @@ toc_sticky: true
 
 ### 내비게이션 메뉴 추가하기
 Blog랑 About 말고 포트폴리오를 정리할 페이지를 하나 더 만들고 싶어서 내비게이션에 메뉴를 추가했다.<br>
-먼저 navigation.yml에 
+먼저 navigation.yml에
 ```
 - title: Projects
   url: /project/
