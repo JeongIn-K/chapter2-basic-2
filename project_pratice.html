@@ -1,17 +1,135 @@
 ---
 layout: default
 ---
-{% include project-header.html %}
-
+  <div class="home-header pure-menu pure-menu-horizontal">
+    <div class="home-header-bar">
+      
+      <ul class="home-header-menu pure-menu-list">
+              
+          <li class="pure-menu-item">
+            <a href="https://joniekwon.github.io/projects/" class="pure-menu-link "">All</a>
+          </li>
+          |
+          <li class="pure-menu-item">
+            <a href="https://jungin.pythonanywhere.com/projects/ODT" class="pure-menu-link "">Object D/T</a>
+          </li>
+          |
+          <li class="pure-menu-item">
+            <a href="https://jungin.pythonanywhere.com/projects/BMS/" class="pure-menu-link "">BMS</a>
+          </li>
+          |
+          <li class="pure-menu-item">
+            <a href="https://jungin.pythonanywhere.com/projects/category" class="pure-menu-link "">BigData</a>
+          </li>
+          |
+          <li class="pure-menu-item">
+            <a href="https://jungin.pythonanywhere.com/projects/NFCOrder" class="pure-menu-link "">Order WEB</a>
+          </li>
+          |
+          <li class="pure-menu-item">
+            <a href="https://jungin.pythonanywhere.com/projects/Practices" class="pure-menu-link "">Practices</a>
+          </li>
+          |
+          
+      </ul>
+      
+    </div>
+  </div>
+<!-- 제목-->
+<h1>Projects</h1><div class="taxonomies-wrapper">
+  <ul class="taxonomies"><li><a class="taxonomy" href="/dates/#2021">
+            <span>2021</span>
+            <span class="taxonomy-count">15</span>
+        </a> 
+      </li></ul>
+</div>
 <div class="content pure-u-1 pure-u-md-1-2"><main>
   <article class="post">
-  <h1 class="post-title">Practice</h1>
-  <p> 예제/실습</p>
-  <br>
-  <a href="#"><span class="label label-danger">ML/DL</span></a>
-  <a href="#"><span class="label label-danger light">Tensorflow</span></a>
-  <a href="#"><span class="label label-danger light">Keras</span></a>
+    <div id = "div1" style="border: solid;width:400px; height:400px; "></div>
 </div>
+</div>    
+<a href="#" onclick="backToTop()" class="back-to-top">Top &#8648;</a><script>
+  function backToTop() {
+    const main = document.getElementById("site-main");
+    main.scrollTop = 0;
+  }
+</script>
 
-<h2>🛠정리중⚒</h2>
+  <div class="container">
+  </div>
+  
 
+  <!-- <div class="project-container">
+    <h1>Projects</h1>
+    <p> 프로젝트</p>
+    <br><center>
+    <a href="#"><span class="label label-danger">ML/DL</span></a>
+    <a href="#"><span class="label label-danger light">Object D/T</span></a>
+    <a href="#"><span class="label label-danger light">Python</span></a></center>
+  </div>
+
+  <div class="container">
+    <div class="project-box">
+      <div class="row">
+        <div class="col-md-3 project-image">
+        </div>
+        <div class="col-md-9 project-post">
+          <h1>환경 변화에 강인한 실시간 무인비행체 탐지/추적 알고리즘 연구</h1><h4>팀과제</h4>
+          <p class="meta"><small>&nbsp;<i class="fa fa-calendar-o"></i> 2019.04.15 ~ 2019.11.30 </small></p><hr/>
+          <div class="post">
+            <ul>
+              <li><h3>주요 내용</h3></li>
+                <ol>
+                  <li>딥러닝 탐지 네트워크의 성능 개선을 위한 드론 이미지 데이터 세트 생성</li>
+                  <li>속도와 정확도를 고려하여 적합한 알고리즘을 선정하고 학습 및 평가 수행</li>
+                  <li>FPN Detector와 Optical Flow Tracker 연동을 위한 작업</li>
+                  <li>오검출을 줄이기 위한 후처리 알고리즘 개발</li>
+                </ol>
+              <br>
+              <li><h3>팀내 역할 - 학생 연구원</h3></li>
+                <ol>
+                  <li>드론 영상 시퀀스 확보 및 Ground Truth 생성, 데이터 정리</li>
+                  <li>논문 검토,머신러닝 / 딥러닝 기반 탐지 네트워크 분석 (Cascades Classifier, YOLOv3, YOLOv3-tiny, MobileNet+YOLOv3,  FPN 등)</li>
+                  <li>Cascades Classifier, YOLOv3, FPN Train/Test, 결과 분석</li>
+                  <li>Boost 라이브러리를 이용하여 Visual Studio(C++)로 구현되어있는 Tracker와 Tensorflow로 구현되어있는 Detector를 연동</li>
+                  <li>영상 시퀀스의 연속적인 특성(드론의 이동거리 및 크기)을 이용하여 Detector의 탐지 결과 중 오검출 판단하는 후처리 알고리즘 작성(C++)</li>
+                </ol>
+              <li><h3>결과 및 성과</h3></li>
+                <ul>
+                  <li>딥러닝 탐지 네트워크 동향 및 구조 파악</li>
+                  <li>Cascades Classifier, YOLOv3, FPN Training/Testing 경험</li>
+                  <li>Boost라이브러리를 이용한 구현 경험</li>
+                  <br>
+                  <h3>결과물1. 드론 이미지 데이터 세트 44,986장</h3>
+                  <img src="{{ site.baseurl }}/images/result_drone_dataset.png">
+                  <h3>결과물2. 후처리 적용하여 오검출이 개선된 FPN Detector </h3>
+                  <h4>후처리 알고리즘 적용 전(왼쪽)/후(오른쪽) </h4></a>
+                  결과 영상 
+                  </div>
+                
+                
+                </ul>
+            </ul>
+            <br>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+  <div class="project-box">
+    <div class="row">
+      <div class="col-md-3 project-image">
+        <img src="http://lorempixel.com/g/400/400/">
+      </div>
+      <div class="col-md-9 project-post">
+        <h1>Project Name</h1><h4>subheading</h4>
+        <p class="meta"><small>&nbsp;<i class="fa fa-calendar-o"></i> 2013</small></p><hr/>
+        <div class="post">
+        "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"
+        </div>
+      </div>
+    </div>
+  </div> -->
+</div>
