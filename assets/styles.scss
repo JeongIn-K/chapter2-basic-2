@@ -1,7 +1,7 @@
-// ---
-// # Use a comment to ensure Jekyll reads the file to be transformed into CSS later
-// # only main files contain this front matter, not partials.
-// ---
+---
+# Use a comment to ensure Jekyll reads the file to be transformed into CSS later
+# only main files contain this front matter, not partials.
+---
 
 //
 //                        ___
@@ -24,10 +24,10 @@
 @import "layout";
 @import "sidebar";
 @import "posts";
-@import "pojects";
 @import "archive";
-@import "home-header";
+@import "projects";
 @import "project-header";
+@import "home-header";
 @import "mldl-pjt1";
 @import "pagination";
 @import "message";
