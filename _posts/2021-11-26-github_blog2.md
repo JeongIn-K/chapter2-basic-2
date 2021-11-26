@@ -26,10 +26,7 @@ toc_sticky: true
 
 ### projects.html 레이아웃 및 상단 메뉴 바꾸기
 * 페이지가 통일되어 보이게 하기 위해 blog와 동일한 레이아웃을 지정하기 위해 _include -- home_header.html을 복사해서 project_header.html을 만든다.<br>
-* projects.html 에 해더를 추가해 준다.
-```
-include project-header.html #뒤에 %} 앞에 {% 써 줄것.
-```
+* projects.html 에 project-header.html include 한다.<br>
 * project_header.html의 archives를 모두 projects로 바꾼다. <br>
 * projects 페이지의 상단 메뉴를 만들기 위해 _data -- archive.yml을 복사해서 projects.yml로 이름을 바꿔준다.<br>
 * projects.yml에 추가하고 싶은 메뉴를 입력해 준다. (tilte, url 원리는 내비게이션 추가할 때랑 동일) <br>
