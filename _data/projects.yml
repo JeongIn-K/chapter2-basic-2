@@ -2,11 +2,8 @@
   title: Object D/T
   url: /projects/
 - type: 
-  title: Sever-Client
-  url: /project_sc/
-- type: 
-  title: Bigdata
-  url: /project_bigdata/
-- type: 
-  title: Practice
-  url: /project_pratice/
+  title: ML/DL & Big Data
+  url: /project_mldl/
+  - type: 
+  title: etc.
+  url: /project_etc/
