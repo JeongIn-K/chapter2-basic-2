@@ -24,10 +24,10 @@
 @import "layout";
 @import "sidebar";
 @import "posts";
-@import "pojects";
 @import "archive";
-@import "home-header";
+@import "projects";
 @import "project-header";
+@import "home-header";
 @import "pagination";
 @import "message";
 @import "toc";
@@ -37,8 +37,6 @@
 @media (prefers-color-scheme: dark) {
   @import "syntax-dark";
 }
-
-@import url(//font.elice.io/EliceDigitalBaeum.css);
 
 // Sass for creating the swatches
 .colors {
