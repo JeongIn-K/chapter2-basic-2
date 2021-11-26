@@ -1,7 +1,7 @@
----
-# Use a comment to ensure Jekyll reads the file to be transformed into CSS later
-# only main files contain this front matter, not partials.
----
+// ---
+// # Use a comment to ensure Jekyll reads the file to be transformed into CSS later
+// # only main files contain this front matter, not partials.
+// ---
 
 //
 //                        ___
@@ -24,11 +24,10 @@
 @import "layout";
 @import "sidebar";
 @import "posts";
-@import "archive";
 @import "pojects";
+@import "archive";
 @import "home-header";
 @import "project-header";
-@import "pjt_mldl";
 @import "pagination";
 @import "message";
 @import "toc";
@@ -38,6 +37,8 @@
 @media (prefers-color-scheme: dark) {
   @import "syntax-dark";
 }
+
+@import url(//font.elice.io/EliceDigitalBaeum.css);
 
 // Sass for creating the swatches
 .colors {
