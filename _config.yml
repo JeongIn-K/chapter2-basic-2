@@ -42,7 +42,7 @@ google_site_verification: google-site-verification=IySA_uI0fFtRMqzY49zEyLwZpxaeC
 lang: en
 
 sass:
-  sass_dir: _css
+  sass_dir: _sass
   style: :compressed
 
 # Options
