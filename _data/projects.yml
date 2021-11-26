@@ -2,8 +2,8 @@
   title: Object D/T
   url: /projects/
 - type: 
-  title: Data Analysis
-  url: /project_data/
+  title: ML/DL BigData
+  url: /project_mldl/
 - type: 
-  title: ML/DL
-  url: /project_mldl/  
+  title: etc
+  url: /project_etc/
