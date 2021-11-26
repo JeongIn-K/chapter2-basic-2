@@ -25,10 +25,7 @@
 @import "sidebar";
 @import "posts";
 @import "archive";
-@import "projects";
-@import "project-header";
 @import "home-header";
-@import "mldl-pjt1";
 @import "pagination";
 @import "message";
 @import "toc";
@@ -38,8 +35,6 @@
 @media (prefers-color-scheme: dark) {
   @import "syntax-dark";
 }
-
-@import url(//font.elice.io/EliceDigitalBaeum.css);
 
 // Sass for creating the swatches
 .colors {
