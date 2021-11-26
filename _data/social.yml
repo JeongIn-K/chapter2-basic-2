@@ -1,0 +1,9 @@
+- title: Email
+  url: mailto://kkkji1215@naver.com
+  icon: fas fa-envelope
+# - title: Twitter
+#   url: https://twitter.com/
+#   icon: fab fa-twitter
+- title: GitHub
+  url: https://github.com/joniekwon
+  icon: fab fa-github
