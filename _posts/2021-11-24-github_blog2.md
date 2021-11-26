@@ -1,7 +1,7 @@
 ---
 title: 깃허브 블로그 만들기 (2) - 페이지 추가하기
 excerpt: 블로그 수정 기록
-date: 2021-11-24 22:01:00 +0800
+date: 2021-11-26 11:15:00 +0800
 categories: [Github/Blog]
 tags: [Github/Blog, Jekyll]
 toc: true
