@@ -1,11 +1,12 @@
 # Setup
-title: Not Pure Poole
-description: A simple, beautiful, and powerful Jekyll theme for blogs
-url: https://vszhub.github.io
-avatar: /avatar.jpeg
+title: Jonie Learning
+description: I'm putting together my portfolio.
+url: https://joniekwon.github.io/
+baseurl: 
+avatar: /assets/img/avatar.JPG
 paginate: 5
 permalink: pretty
-cover_image: /bg.jpeg
+cover_image: /assets/img/background.jpg
 
 # Gems
 plugins:
@@ -29,15 +30,15 @@ exclude:
 
 # Optimize Jekyl SEO Tag
 twitter:
-  username: vszhub
+  username: Jonie Kwon
   card: summary
 logo: logo.png
 social:
-  name: Songzi Vong
+  name: Jonie Kwon
   links:
-    - https://twitter.com/vszhub
-    - https://github.com/vszhub
-google_site_verification: xxxxx
+    #- https://twitter.com/joniekwon
+    - https://github.com/joniekwon
+google_site_verification: google-site-verification=IySA_uI0fFtRMqzY49zEyLwZpxaeCGKDEnzsQwrzCwo
 lang: en
 
 sass:
@@ -54,6 +55,26 @@ sass:
 
 # Specify the author for blog posts
 author:
-  name: Songzi Vong
-  url: https://github.com/vszhub/
-  email: vszhub@gmail.com
+  name: Jonie Kwon
+  url: https://github.com/joniekwon
+  email: kkkji1215@naver.com
+
+markdown: kramdown
+kramdown:
+    extensions: ["tables"]
+    highlighter: rouge
+    syntax_highlighter_opts:
+        block:
+            line_numbers: true
+
+defaults:
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "default"
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
