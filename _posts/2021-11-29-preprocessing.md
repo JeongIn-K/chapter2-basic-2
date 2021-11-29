@@ -13,7 +13,7 @@ toc_sticky: true
 ### 훈련-테스트 데이터 세트 분할
 ```python
 from sklearn.model_selection import train_test_split
-X_train, X-test, y_train, y_test = train_test_split(X, y, test_size=0.3,													random_state=0, stratify=y)
+X_train, X-test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=0, stratify=y)
 ```
 
 
@@ -91,7 +91,6 @@ from sklearn.preprocessing import Normalizer
 nrm = Normalizer()
 X_train_l2 = nrm.fit_transform(X_train)
 ```
-
 
 ### L1, L2 Reularization
 * 머신러닝 교과서 169 ~176p
