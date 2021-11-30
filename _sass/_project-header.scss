@@ -2,11 +2,15 @@
 //
 // 
 
+
 .span {
   color:#999;cursor:not-allowed;background-color:#fff
 }
-.decoration_none {
-  text-decoration-line: none;
+
+.project-tags{
+  a {
+    text-decoration: none;
+  }
 }
 
 .label {
