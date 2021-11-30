@@ -3,7 +3,7 @@ title: 유용한 특성 선택 - 특성 선택
 excerpt: 효율적인 학습을 위한 특성 선택하기
 date: 2021-11-28 23:48:00 +0800
 categories: [ML/DL]
-tags: [DACON, 머신러닝교과서]
+tags: [머신러닝교과서]
 toc: true
 toc_sticky: true
 ---
