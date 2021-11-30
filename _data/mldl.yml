@@ -1,0 +1,9 @@
+- type: 
+  title: 주식 종가 예측
+  url: /project_mldl/
+- type: 
+  title: 와인 품질 예측
+  url: /wine_quality/
+- type: 
+  title: 강남구 아파트 가격 예측
+  url: /gannam_apt/
