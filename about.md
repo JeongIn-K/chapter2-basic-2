@@ -33,5 +33,5 @@ Python, SQL, C/C++, Java, R, HTML/CSS
 | 2020.12.|   정보처리기사  |  한국산업인력공단 |
 
 ## &#128150; 좋아하는 것
-![Rin](/img/mylove.JPG){:width="100" height="100"}
+![Rin](/assets/img/mylove.JPG){:width="100" height="100"}
 &#127844; &#127918; &#127929; &#127946;
