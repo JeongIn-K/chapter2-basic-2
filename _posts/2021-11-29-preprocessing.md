@@ -3,7 +3,7 @@ title: 데이터 전처리 - 표준화, 정규화
 excerpt:
 date: 2021-11-28 23:48:00 +0800
 categories: [ML/DL]
-tags: [DACON, 머신러닝교과서]
+tags: [머신러닝교과서]
 toc: true
 toc_sticky: true
 ---
