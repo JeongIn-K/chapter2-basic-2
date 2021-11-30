@@ -1,14 +1,15 @@
 ---
-title: 불균형한 데이터세트 다루기
-excerpt:
+title: 불균형한 클래스 다루기
+excerpt: 
 date: 2021-11-28 23:48:00 +0800
 categories: [ML/DL]
-tags: [DACON, 머신러닝교과서]
+tags: [머신러닝교과서]
 toc: true
 toc_sticky: true
 ---
 
 > 특정 클래스에 치우쳐 있는 데이터를 다룰 때 유용한 기법들
+
 <br>
 
 * 불균형한 데이터로 훈련할 경우 빈도가 높은 클래스의 예측을 최적화하는 모델을 학습.<br>
@@ -34,7 +35,9 @@ X_upsampled, y_upsampled = resample(X_imb[y_imb == 1], y_imb[y_imb==1], replace=
 
 ### SMOTE
 * 인공적인 훈련 샘플 생성에 가장 널리 사용되는 알고리즘<br>
-* 파이썬 라이브러리 imbalanced-learn에 구현되어 있음
+* 파이썬 라이브러리 imbalanced-learn에 구현되어 있음<br>
+* [SMOTE API DOCS](https://imbalanced-learn.org/stable/references/generated/imblearn.over_sampling.SMOTE.html)
 
 ### 다른 방법들
 [참고](https://sjpyo.tistory.com/49)
+머신러닝 교과서 181p~
