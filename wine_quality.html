@@ -1,0 +1,61 @@
+---
+layout: default
+---
+{% include project-header.html %}
+<article class="post">
+  {% include pjt-list.html %}
+
+<h2 id="🍷 와인 품질 분류">🍷 와인 품질 분류</h2>
+<p class="meta"><small> 👩🏻 개인 과제 &nbsp;|&nbsp;📅 2021.11.29 ~ 진행중 </small></p><hr/>
+<img src=/assets/img/projects/wine/header.PNG><br>
+DACON 와인 품질 분류 경연대회 - 주어진 와인 데이터를 이용하여 품질 분류하기<br>
+
+<h3>📌 주요 내용</h3>
+<ol>
+  <li><h4>데이터 전처리</h4></li>
+  ⭐ 결측치 및 이상치 확인<br>
+  isna를 이용하여 Dataframe의 결측치를 확인<br>
+  <div class="colorscripter-code" style="color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important; position:relative !important;overflow:auto"><table class="colorscripter-code-table" style="margin:0;padding:0;border:none;background-color:#272727;border-radius:4px;" cellspacing="0" cellpadding="0"><tr><td style="padding:6px;border-right:2px solid #4f4f4f"><div style="margin:0;padding:0;word-break:normal;text-align:right;color:#aaa;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="line-height:130%">1</div><div style="line-height:130%">2</div><div style="line-height:130%">3</div><div style="line-height:130%">4</div><div style="line-height:130%">5</div><div style="line-height:130%">6</div></div></td><td style="padding:6px 0;text-align:left"><div style="margin:0;padding:0;color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#4be6fa">print</span>(f<span style="color:#ffd500">"train_data의&nbsp;결측치:"</span>)</div><div style="background-color:#303030; padding:0 6px; white-space:pre; line-height:130%"><span style="color:#4be6fa">print</span>(f<span style="color:#ffd500">"{train_data.isna().sum()}"</span>)</div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#4be6fa">print</span>(<span style="color:#ffd500">"-"</span><span style="color:#0086b3"></span><span style="color:#ff3399">*</span><span style="color:#c10aff">30</span>)</div><div style="background-color:#303030; padding:0 6px; white-space:pre; line-height:130%"><span style="color:#4be6fa">print</span>(f<span style="color:#ffd500">"test_data&nbsp;결측치:"</span>)</div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#4be6fa">print</span>(f<span style="color:#ffd500">"{test_data.isna().sum()}"</span>)</div><div style="background-color:#303030; padding:0 6px; white-space:pre; line-height:130%"><span style="color:#4be6fa">print</span>(<span style="color:#ffd500">"-"</span><span style="color:#0086b3"></span><span style="color:#ff3399">*</span><span style="color:#c10aff">30</span>)</div></div></td><td style="vertical-align:bottom;padding:0 2px 4px 0"><a href="http://colorscripter.com/info#e" target="_blank" style="text-decoration:none;color:white"><span style="font-size:9px;word-break:normal;background-color:#4f4f4f;color:white;border-radius:10px;padding:1px">cs</span></a></td></tr></table></div><br>
+  <br>
+  <img src="/assets/img/projects/wine/isna.PNG"><br>
+  <br>
+  <p>⭐ 범주형 데이터 처리<br></p>
+  와인의 종류인 'type' feature를 정수형태로 변환<br>
+  Dataframe과 변환할 열 이름을 입력하면 변환된 Dataframe을 리턴하는 z_oForType(data,columnName) 함수 작성<br>
+  <div class="colorscripter-code" style="color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important; position:relative !important;overflow:auto"><table class="colorscripter-code-table" style="margin:0;padding:0;border:none;background-color:#272727;border-radius:4px;" cellspacing="0" cellpadding="0"><tr><td style="padding:6px;border-right:2px solid #4f4f4f"><div style="margin:0;padding:0;word-break:normal;text-align:right;color:#aaa;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="line-height:130%">1</div><div style="line-height:130%">2</div><div style="line-height:130%">3</div><div style="line-height:130%">4</div><div style="line-height:130%">5</div><div style="line-height:130%">6</div><div style="line-height:130%">7</div><div style="line-height:130%">8</div></div></td><td style="padding:6px 0;text-align:left"><div style="margin:0;padding:0;color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#ff3399">def</span>&nbsp;z_oForType(data,columnName):</div><div style="background-color:#303030; padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;columns&nbsp;<span style="color:#0086b3"></span><span style="color:#ff3399">=</span>&nbsp;set(data[columnName].values)</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;colNames&nbsp;<span style="color:#0086b3"></span><span style="color:#ff3399">=</span>&nbsp;{}</div><div style="background-color:#303030; padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#ff3399">for</span>&nbsp;key,&nbsp;value&nbsp;<span style="color:#ff3399">in</span>&nbsp;enumerate(columns):</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;colNames[value]&nbsp;<span style="color:#0086b3"></span><span style="color:#ff3399">=</span>&nbsp;key</div><div style="background-color:#303030; padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;data[columnName]&nbsp;<span style="color:#0086b3"></span><span style="color:#ff3399">=</span>&nbsp;data[columnName].map(lambda&nbsp;x:&nbsp;colNames[x])</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#999999">#data[columnName]&nbsp;=&nbsp;data[columnName].replace(colNames)&nbsp;로&nbsp;해도&nbsp;된답니다.</span></div><div style="background-color:#303030; padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#ff3399">return</span>&nbsp;data</div></div><div style="text-align:right;margin-top:-13px;margin-right:5px;font-size:9px;font-style:italic"><a href="http://colorscripter.com/info#e" target="_blank" style="color:#4f4f4ftext-decoration:none">Colored by Color Scripter</a></div></td><td style="vertical-align:bottom;padding:0 2px 4px 0"><a href="http://colorscripter.com/info#e" target="_blank" style="text-decoration:none;color:white"><span style="font-size:9px;word-break:normal;background-color:#4f4f4f;color:white;border-radius:10px;padding:1px">cs</span></a></td></tr></table></div><br><br>
+  <img src='/assets/img/projects/wine/class.PNG'><br>
+  <br>
+  <p>⭐ 데이터 분포 확인<br></p>
+  <img src='/assets/img/projects/wine/ClassCount.png'><br>
+  대부분의 클래스가 5~6에 분포되어있는 unbalanced dataset임을 확인<br>
+  <br>
+  <p>⭐ SMOTE Sampling<br></p>
+  클래스 불균형 해결을 위해 SMOTE 알고리즘을 이용하여 다른 클래스의 데이터를 업샘플링<br>
+  <img src='/assets/img/projects/wine/smote_sampling.PNG'> <br>
+  <img src='/assets/img/projects/wine/smote_sampling_count.PNG' width="600", height="auto"> <br>
+  데이터 개수가 기존 3231개에서 7089개로 업샘플링 되었고 클래스마다 1400개의 샘플을 가지고 있도록 구성됨 <br>
+  <br>
+  <p>⭐ 모델 선택 : Random Forest</p>
+  과적합을 막고 모델 복잡도를 줄이기 위해 모델의 정확도에 영향을 미치는 주요 특성 파악<br>
+  랜덤 포레스트의 forest.feature_importances_ 를 이용
+  <img src='/assets/img/projects/wine/Feature Importance.png'> <br>
+  <br>
+  <p>⭐ 모델 훈련 및 평가</h4></p>
+  중요 특성 5개를 선택하여 모델 훈련<br>
+  <div class="colorscripter-code" style="color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important; position:relative !important;overflow:auto"><table class="colorscripter-code-table" style="margin:0;padding:0;border:none;background-color:#272727;border-radius:4px;" cellspacing="0" cellpadding="0"><tr><td style="padding:6px;border-right:2px solid #4f4f4f"><div style="margin:0;padding:0;word-break:normal;text-align:right;color:#aaa;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="line-height:130%">1</div><div style="line-height:130%">2</div><div style="line-height:130%">3</div><div style="line-height:130%">4</div><div style="line-height:130%">5</div><div style="line-height:130%">6</div><div style="line-height:130%">7</div><div style="line-height:130%">8</div><div style="line-height:130%">9</div></div></td><td style="padding:6px 0;text-align:left"><div style="margin:0;padding:0;color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#ff3399">from</span>&nbsp;sklearn.feature_selection&nbsp;<span style="color:#ff3399">import</span>&nbsp;RFE</div><div style="background-color:#303030; padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;rfe&nbsp;<span style="color:#0086b3"></span><span style="color:#ff3399">=</span>&nbsp;RFE(forest,&nbsp;n_features_to_select<span style="color:#0086b3"></span><span style="color:#ff3399">=</span><span style="color:#c10aff">5</span>)</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;rfe.fit(X_train,&nbsp;y_train)</div><div style="background-color:#303030; padding:0 6px; white-space:pre; line-height:130%">&nbsp;</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;importances&nbsp;<span style="color:#0086b3"></span><span style="color:#ff3399">=</span>&nbsp;rfe.estimator_.feature_importances_</div><div style="background-color:#303030; padding:0 6px; white-space:pre; line-height:130%">&nbsp;</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;prediction&nbsp;<span style="color:#0086b3"></span><span style="color:#ff3399">=</span>&nbsp;forest.predict(x_test)</div><div style="background-color:#303030; padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;score&nbsp;<span style="color:#0086b3"></span><span style="color:#ff3399">=</span>&nbsp;ACCURACY(y_test,&nbsp;prediction)</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#4be6fa">print</span>(f<span style="color:#ffd500">'모델의&nbsp;정확도:&nbsp;{score*100:.2f}%'</span>)&nbsp;</div></div></td><td style="vertical-align:bottom;padding:0 2px 4px 0"><a href="http://colorscripter.com/info#e" target="_blank" style="text-decoration:none;color:white"><span style="font-size:9px;word-break:normal;background-color:#4f4f4f;color:white;border-radius:10px;padding:1px">cs</span></a></td></tr></table></div><br>
+  <img src='/assets/img/projects/wine/score_after_smote.png'>
+
+  <p>⭐ 첫번째 제출</h4></p>
+  <img src='/assets/img/projects/wine/rank.PNG'>
+  0.55882 점수로 24위 기록 😅<br>
+
+  <li><h4>🔎 더 나은 모델 만들기(진행 중)</h4></li>
+  ⭐ 여러가지 모델을 만들고 비교하기<br>
+  ⭐ 하이터파라미터 튜닝<br>
+  ⭐ 검증 및 평가<br>
+  ⭐ 최종 제출<br>
+  ⭐ 결과<br>
+</ol>
+
+
+
