@@ -13,6 +13,20 @@
   }
 }
 
+.project_list{
+  a {
+    text-decoration: none;
+    
+    &:hover,
+    &:focus {
+      color: inherit;
+      background-color: inherit;
+      border-bottom-color: #0e1036;
+    }
+  }
+}
+
+
 .label {
   display:inline;
   padding:.2em .6em .3em;
