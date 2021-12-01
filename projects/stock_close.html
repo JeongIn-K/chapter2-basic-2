@@ -16,13 +16,13 @@ DACON 주식 종료 가격 예측 경진 대회 - 주식 데이터로 5일간의
   너무 이전의 데이터는 오히려 성능을 하락 시키므로 가져오는 데이터를 1년으로 제한
   <div class="colorscripter-code" style="color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important; position:relative !important;overflow:auto"><table class="colorscripter-code-table" style="margin:0;padding:0;border:none;background-color:#272727;border-radius:4px;" cellspacing="0" cellpadding="0"><tr><td style="padding:6px;border-right:2px solid #4f4f4f"><div style="margin:0;padding:0;word-break:normal;text-align:right;color:#aaa;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="line-height:130%">1</div><div style="line-height:130%">2</div><div style="line-height:130%">3</div><div style="line-height:130%">4</div><div style="line-height:130%">5</div><div style="line-height:130%">6</div><div style="line-height:130%">7</div><div style="line-height:130%">8</div></div></td><td style="padding:6px 0;text-align:left"><div style="margin:0;padding:0;color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="padding:0 6px; white-space:pre; line-height:130%">stock_code&nbsp;<span style="color:#0086b3"></span><span style="color:#ff3399">=</span>&nbsp;<span style="color:#ffd500">'005930'</span>&nbsp;<span style="color:#999999">#삼성전자</span></div><div style="background-color:#303030; padding:0 6px; white-space:pre; line-height:130%">predict_date&nbsp;<span style="color:#0086b3"></span><span style="color:#ff3399">=</span>&nbsp;<span style="color:#ffd500">'20211129'</span>&nbsp;&nbsp;<span style="color:#999999">#&nbsp;29일의&nbsp;종가&nbsp;예측</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">period&nbsp;<span style="color:#0086b3"></span><span style="color:#ff3399">=</span>&nbsp;<span style="color:#c10aff">365</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#999999">#&nbsp;1년간의&nbsp;데이터를&nbsp;사용</span></div><div style="background-color:#303030; padding:0 6px; white-space:pre; line-height:130%">&nbsp;</div><div style="padding:0 6px; white-space:pre; line-height:130%">predict_date&nbsp;<span style="color:#0086b3"></span><span style="color:#ff3399">=</span>&nbsp;pd.to_datetime(<span style="color:#ffd500">'20211101'</span>)</div><div style="background-color:#303030; padding:0 6px; white-space:pre; line-height:130%">end_date&nbsp;<span style="color:#0086b3"></span><span style="color:#ff3399">=</span>&nbsp;predict_date&nbsp;<span style="color:#0086b3"></span><span style="color:#ff3399">-</span>&nbsp;datetime.timedelta(days<span style="color:#0086b3"></span><span style="color:#ff3399">=</span><span style="color:#c10aff">1</span>)&nbsp;<span style="color:#999999">#&nbsp;예측날짜의&nbsp;하루전의&nbsp;테이터까지만&nbsp;사용</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">start_date&nbsp;<span style="color:#0086b3"></span><span style="color:#ff3399">=</span>&nbsp;end_date&nbsp;<span style="color:#0086b3"></span><span style="color:#ff3399">-</span>&nbsp;datetime.timedelta(days<span style="color:#0086b3"></span><span style="color:#ff3399">=</span><span style="color:#c10aff">365</span>)&nbsp;<span style="color:#999999">#&nbsp;1년&nbsp;전의&nbsp;데이터까지&nbsp;사용</span></div><div style="background-color:#303030; padding:0 6px; white-space:pre; line-height:130%">&nbsp;</div></div><div style="text-align:right;margin-top:-13px;margin-right:5px;font-size:9px;font-style:italic"><a href="http://colorscripter.com/info#e" target="_blank" style="color:#4f4f4ftext-decoration:none">Colored by Color Scripter</a></div></td><td style="vertical-align:bottom;padding:0 2px 4px 0"><a href="http://colorscripter.com/info#e" target="_blank" style="text-decoration:none;color:white"><span style="font-size:9px;word-break:normal;background-color:#4f4f4f;color:white;border-radius:10px;padding:1px">cs</span></a></td></tr></table></div>
   <br>
-  ⭐ 데이터셋 확인
-  <ol>
-    <li> 예측할 주식 종목 및 코드, 상장시장</li>
-    <img src="/assets/img/projects/stock/stock_list.PNG">
-    <li> index 날짜(datetime)순으로 시작가 최고가 최저가 종가 거래량 변동률순으로 정리되어있음</li>
-    <img src="/assets/img/projects/stock/financedata.PNG">
-  </ol>
+  ⭐ 데이터셋 확인<br>
+  
+    예측할 주식 종목 및 코드, 상장시장<br>
+    <img src="/assets/img/projects/stock/stock_list.PNG"><br>
+    index 날짜(datetime)순으로 시작가 최고가 최저가 종가 거래량 변동률순으로 정리되어있음<br>
+    <img src="/assets/img/projects/stock/financedata.PNG"><br>
+  
   <br>
   ⭐ 모델 스케치<br>
   예측날짜를 입력하면 전주까지의 주가 데이터를 이용하여 입력한 날이 포함된 주간의 종료 가격을 예측<br>
@@ -51,13 +51,13 @@ DACON 주식 종료 가격 예측 경진 대회 - 주식 데이터로 5일간의
   <br>
   ⭐ 정확도 비교<br>
   베이스 라인으로 주어진 모델과 비교 : <b>평균 정확도 7.24% 증가</b>🎉<br>
-  삼성전자 예측 종가 및 테스트 정확도(왼쪽: 베이스 라인 모델, 오른쪽: 새로운 모델)
+  삼성전자 예측 종가 및 테스트 정확도(위: 베이스 라인 모델, 아래: 새로운 모델)
   <img src="/assets/img/projects/stock/base_predict.PNG"><img src="/assets/img/projects/stock/test_predict.PNG"><br>
   
   ⭐ 학습 곡선을 이용한 훈련평가<br>
   검증 데이터에서 상대적으로 점수가 낮은 것을 확인. 과대적합 가능성과 일반화 성능이 의심됨!<br>
   모델 복잡도를 줄이고 일반화 성능을 높이기 위한 작업 필요.
-  <img src="/assets/img/projects/stock/learning_curve.PNG">
+  <img src="/assets/img/projects/stock/learning_curve.ㅔㅜㅎ">
   왼쪽: 네이버, 오른쪽: 삼성전자<br>
 
   ⭐ <br>
