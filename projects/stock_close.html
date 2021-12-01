@@ -26,12 +26,12 @@ DACON 주식 종료 가격 예측 경진 대회 - 주식 데이터로 5일간의
   ⭐ 모델 스케치<br>
   예측날짜를 입력하면 전주까지의 주가 데이터를 이용하여 입력한 날이 포함된 주간의 종료 가격을 예측<br>
   5일전의 주가 정보를 X_train으로, 예측할 날로부터 1~5일의 종가를 y_train으로 학습하는 모델을 각각 만들기로 함.
-  <img src="/asset/img/projects/stock/X_train.PNG"><br>
-  <img src="/asset/img/projects/stock/y_train.PNG"><br>
+  <img src="/assets/img/projects/stock/X_train.PNG"><br>
+  <img src="/assets/img/projects/stock/y_train.PNG"><br>
   
   ⭐ 학습 데이터 추가<br> 
   코스닥, 코스피 지수 정보가 종가에 영향을 미칠 것이라 판단하여 해당 정보를 찾아서 데이터에 추가함
-  <img src="/asset/img/projects/stock/kospi_kosdaq.PNG"><br>
+  <img src="/assets/img/projects/stock/kospi_kosdaq.PNG"><br>
 
   ⭐ 데이터 전처리<br>
   요일의 정보도 유의미하다고 판단하고 weekday열을 추가하여 월요일 0 금요일 4로 매핑<br>
@@ -50,7 +50,7 @@ DACON 주식 종료 가격 예측 경진 대회 - 주식 데이터로 5일간의
   <img src="/assets/img/projects/stock/test_predict/PNG">
   1일차 90.8% ~ 5 일차 74.6%의 정확도를 가진 새로운 모델을 만듦<br>
   <div class="colorscripter-code" style="color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important; position:relative !important;overflow:auto"><table class="colorscripter-code-table" style="margin:0;padding:0;border:none;background-color:#272727;border-radius:4px;" cellspacing="0" cellpadding="0"><tr><td style="padding:6px;border-right:2px solid #4f4f4f"><div style="margin:0;padding:0;word-break:normal;text-align:right;color:#aaa;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="line-height:130%">1</div><div style="line-height:130%">2</div><div style="line-height:130%">3</div></div></td><td style="padding:6px 0;text-align:left"><div style="margin:0;padding:0;color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#ff3399">import</span>&nbsp;FinanceDataReader&nbsp;<span style="color:#ff3399">as</span>&nbsp;fdr</div><div style="background-color:#303030; padding:0 6px; white-space:pre; line-height:130%">stock&nbsp;<span style="color:#0086b3"></span><span style="color:#ff3399">=</span>&nbsp;fdr.DataReader(sample_code,&nbsp;start&nbsp;<span style="color:#0086b3"></span><span style="color:#ff3399">=</span>&nbsp;start_date,&nbsp;end&nbsp;<span style="color:#0086b3"></span><span style="color:#ff3399">=</span>&nbsp;end_date)</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;</div></div><div style="text-align:right;margin-top:-13px;margin-right:5px;font-size:9px;font-style:italic"><a href="http://colorscripter.com/info#e" target="_blank" style="color:#4f4f4ftext-decoration:none">Colored by Color Scripter</a></div></td><td style="vertical-align:bottom;padding:0 2px 4px 0"><a href="http://colorscripter.com/info#e" target="_blank" style="text-decoration:none;color:white"><span style="font-size:9px;word-break:normal;background-color:#4f4f4f;color:white;border-radius:10px;padding:1px">cs</span></a></td></tr></table></div> 
-  
+
   ⭐ 정확도 비교<br>
   베이스 라인으로 주어진 모델과 비교 : <b>평균 정확도 7.24% 증가🎉</b><br>
   삼성전자 예측 종가 및 테스트 정확도(왼쪽: 베이스 라인 모델, 오른쪽: 새로운 모델)
