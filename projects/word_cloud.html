@@ -18,27 +18,27 @@ layout: default
     학술 연구 정보 서비스(<a href="http://www.riss.kr/">http://www.riss.kr/</a>)사이트를 통해 논문 목록을 다운로드<br>
     <img src="/assets/img/projects/wordcloud/search.PNG"><br>
     다운로드한 모든 .xls 파일을 데이터 프레임으로 가져와 concat() 수행 (axis=0)<br><br>
-    <li>데이터 정제: re 정규식, stopwords.words("english")</li>
-    re 모듈을 아용하여 알파벳이 아닌(^[a-zA-Z]+) 데이터는 공백으로 치환하고 불용어를 제거 <br>
+    <li>데이터 정제: re 정규식, stopwords.words("english")</li><br>
+    re 모듈을 이용하여 알파벳이 아닌(^[a-zA-Z]+) 데이터는 공백으로 치환하고 불용어를 제거 <br>
     <div class="colorscripter-code" style="color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important; position:relative !important;overflow:auto"><table class="colorscripter-code-table" style="margin:0;padding:0;border:none;background-color:#272727;border-radius:4px;" cellspacing="0" cellpadding="0"><tr><td style="padding:6px;border-right:2px solid #4f4f4f"><div style="margin:0;padding:0;word-break:normal;text-align:right;color:#aaa;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="line-height:130%">1</div></div></td><td style="padding:6px 0;text-align:left"><div style="margin:0;padding:0;color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="padding:0 6px; white-space:pre; line-height:130%">EnWords&nbsp;<span style="color:#0086b3"></span><span style="color:#ff3399">=</span>&nbsp;re.sub(r<span style="color:#ffd500">"[^a-zA-Z]+"</span>,&nbsp;<span style="color:#ffd500">"&nbsp;"</span>,&nbsp;<span style="color:#4be6fa">str</span>(title))</div></div></td><td style="vertical-align:bottom;padding:0 2px 4px 0"><a href="http://colorscripter.com/info#e" target="_blank" style="text-decoration:none;color:white"><span style="font-size:9px;word-break:normal;background-color:#4f4f4f;color:white;border-radius:10px;padding:1px">cs</span></a></td></tr></table></div><br>
-    <li>데이터 변환: word_tokenize(), lower(), WordNetLemmatize()</li>
+    <li>데이터 변환: word_tokenize(), lower(), WordNetLemmatize()</li><br>
     소문자로 변환, 토큰화, 표제어 추출 수행
     <div class="colorscripter-code" style="color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important; position:relative !important;overflow:auto"><table class="colorscripter-code-table" style="margin:0;padding:0;border:none;background-color:#272727;border-radius:4px;" cellspacing="0" cellpadding="0"><tr><td style="padding:6px;border-right:2px solid #4f4f4f"><div style="margin:0;padding:0;word-break:normal;text-align:right;color:#aaa;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="line-height:130%">1</div><div style="line-height:130%">2</div><div style="line-height:130%">3</div></div></td><td style="padding:6px 0;text-align:left"><div style="margin:0;padding:0;color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="padding:0 6px; white-space:pre; line-height:130%">EnWordsToken&nbsp;<span style="color:#0086b3"></span><span style="color:#ff3399">=</span>&nbsp;word_tokenize(EnWords.lower())</div><div style="background-color:#303030; padding:0 6px; white-space:pre; line-height:130%">EnWordsTokenStop&nbsp;<span style="color:#0086b3"></span><span style="color:#ff3399">=</span>&nbsp;[w&nbsp;<span style="color:#ff3399">for</span>&nbsp;w&nbsp;<span style="color:#ff3399">in</span>&nbsp;EnWordsToken&nbsp;<span style="color:#ff3399">if</span>&nbsp;w&nbsp;<span style="color:#ff3399">not</span>&nbsp;<span style="color:#ff3399">in</span>&nbsp;stopWords]</div><div style="padding:0 6px; white-space:pre; line-height:130%">EnWordsTokenStopLemma&nbsp;<span style="color:#0086b3"></span><span style="color:#ff3399">=</span>&nbsp;[lemma.lemmatize(w)&nbsp;<span style="color:#ff3399">for</span>&nbsp;w&nbsp;<span style="color:#ff3399">in</span>&nbsp;EnWordsTokenStop]</div></div></td><td style="vertical-align:bottom;padding:0 2px 4px 0"><a href="http://colorscripter.com/info#e" target="_blank" style="text-decoration:none;color:white"><span style="font-size:9px;word-break:normal;background-color:#4f4f4f;color:white;border-radius:10px;padding:1px">cs</span></a></td></tr></table></div>
     <br>
   </ol>
   <br>
-  <h3>🔎 데이터 탐색 및 모델링 📊</h3>
+  <h3>🔎 데이터 탐색 및 모델링 📊</h3><br>
   <ol>
     <li>전처리 된 모든 데이터로 시각화</li>
-    <img src="/assets/img/projects/wordcloud/wordcloud_detection.PNG"><br>
-    <li>단어 빈도 탐색: Counter(), most_common()</li>
-    <img src="/assets/img/projects/wordcloud/most_common30.PNG">
+    <img src="/assets/img/projects/wordcloud/wordcloud_detection.PNG"><br><br>
+    <li>단어 빈도 탐색: Counter(), most_common()</li><br>
+    <img src="/assets/img/projects/wordcloud/most_common30.PNG"><br>
     내가 알고 싶은 것은 'deep', 'learning', 'detection'이 아닌 주로 다루는 주제나 기술이므로 70개의 주요 단어 중 'anomaly', 'intrusion', 'cancer'를 제외하고 삭제<br>
     <div class="colorscripter-code" style="color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important; position:relative !important;overflow:auto"><table class="colorscripter-code-table" style="margin:0;padding:0;border:none;background-color:#272727;border-radius:4px;" cellspacing="0" cellpadding="0"><tr><td style="padding:6px;border-right:2px solid #4f4f4f"><div style="margin:0;padding:0;word-break:normal;text-align:right;color:#aaa;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="line-height:130%">1</div><div style="line-height:130%">2</div><div style="line-height:130%">3</div><div style="line-height:130%">4</div></div></td><td style="padding:6px 0;text-align:left"><div style="margin:0;padding:0;color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="padding:0 6px; white-space:pre; line-height:130%">except_words&nbsp;<span style="color:#0086b3"></span><span style="color:#ff3399">=</span>&nbsp;[<span style="color:#ffd500">'anomaly'</span>,&nbsp;<span style="color:#ffd500">'intrusion'</span>,&nbsp;<span style="color:#ffd500">'cancer'</span>]</div><div style="background-color:#303030; padding:0 6px; white-space:pre; line-height:130%"><span style="color:#ff3399">for</span>&nbsp;tag,&nbsp;counts&nbsp;<span style="color:#ff3399">in</span>&nbsp;count.most_common(<span style="color:#c10aff">70</span>):</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#ff3399">if</span>(<span style="color:#4be6fa">len</span>(<span style="color:#4be6fa">str</span>(tag))<span style="color:#0086b3"></span><span style="color:#ff3399">&gt;</span><span style="color:#c10aff">1</span>)&nbsp;<span style="color:#ff3399">and</span>&nbsp;tag&nbsp;<span style="color:#ff3399">not</span>&nbsp;<span style="color:#ff3399">in</span>&nbsp;except_words:</div><div style="background-color:#303030; padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#ff3399">del</span>&nbsp;word_count[tag]</div></div></td><td style="vertical-align:bottom;padding:0 2px 4px 0"><a href="http://colorscripter.com/info#e" target="_blank" style="text-decoration:none;color:white"><span style="font-size:9px;word-break:normal;background-color:#4f4f4f;color:white;border-radius:10px;padding:1px">cs</span></a></td></tr></table></div><br>
-    삭제된 27개 단어를 제외한 나머지를 히스토그램 및 워드클라우드로 출력<br>
-    <center><img src="/assets/img/projects/wordcloud/bar_chart_detection.PNG"><br>
+    삭제된 27개 단어를 제외한 나머지를 히스토그램 및 워드클라우드로 출력<br><br>
+    <center><img src="/assets/img/projects/wordcloud/bar_chart_detection.PNG">
     <img src="/assets/img/projects/wordcloud/wordcloud_detection_.PNG"><br></center>
-    'cancer', 'covid', 'crack' 'chest', 'vehicle'등의 단어로 보아 병변, 바이러스, 자동차, 결함 검출에 대한 연구가 있다는 것을 확인 할 수 있다.<br><br>
+    'cancer', 'covid', 'crack' 'chest', 'vehicle'등의 단어로 보아 병변, 바이러스, 자동차, 결함 검출에 대한 연구가 있다는 것을 확인 할 수 있다.<br><br><br>
     <li>논문 발표 년도의 데이터 확인</li>
     <img src="/assets/img/projects/wordcloud/publish_year.PNG"><br>
     2020년도에 발표된 논문보다 약 1/3정도 적은 숫자를 보임.
@@ -46,4 +46,3 @@ layout: default
     메타버스나 블록체인에 대한 관심이 높아졌다고 하던데.. 코시국 등 여러가지 이유를 추측해 볼 수 있을 것 같다.
   </ol>
   <br>
-
