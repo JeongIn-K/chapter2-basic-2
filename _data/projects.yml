@@ -1,9 +1,9 @@
 - type: 
-  title: Object D/T
-  url: /projects/
-- type: 
   title: ML/DL BigData
-  url: /project_mldl/
+  url: /projects_mldl/
 - type: 
-  title: etc
-  url: /project_etc/
+  title: Visualize
+  url: /projects_visualize/
+- type: 
+  title: Object D/T
+  url: /projects_odt/
