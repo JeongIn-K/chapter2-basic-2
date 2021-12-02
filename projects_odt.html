@@ -2,57 +2,18 @@
 layout: default
 ---
 {% include project-header.html %}
-  <article class="post">
-  <h1 class="post-title">Object Detection / Tracking</h1>
-  <p>객체 탐지 및 추적 관련 프로젝트</p>
-  <div class="project-tags">
-    <a href="#"><span class="label label-success">Computer Vision</span></a>
-    <a href="#"><span class="label label-success">ML/DL</span></a>
-    <a href="#"><span class="label label-success">Object Detection</span></a>
-    <a href="#"><span class="label label-success">Object Tracking</span></a>
-  </div>
+<article class="post">
+  {% include pjt-mldl-list.html %}
+  <h2>프로젝트 미리보기</h2>
+<ul>
+  <li><h3>💡 환경 변화에 강인한 실시간 무인비행체 탐지/추적 알고리즘 연구</h3></li>
+  <h4>FPN Detector with afterprocessing</h4>
+  {% include odt-1.html %}
+
   <br>
-  <div class="project_list">
-    <h2>프로젝트 목록</h2>
-    <ul>
-      <li><a href="/projects_odt">💡 환경 변화에 강인한 실시간 무인비행체 탐지/추적 알고리즘 연구</span></a></li>
-      <li><a href="/projects/odt_1">💡 소형 표적 추적을 위한 알고리즘 성능 개선</span></a></li>
-    </ul>
-  </div>
+  <br>
+  <li>💡 소형 표적 추적을 위한 알고리즘 성능 개선</li>
+  Mean-shift tracker with global motion estimation
+  {% include odt-2.html %}
+</ul>
 
-  <h2>🛠정리중 입니다⚒</h2>
-
-<h2 id="💡 환경 변화에 강인한 실시간 무인비행체 탐지/추적 알고리즘 연구">💡환경 변화에 강인한 실시간 무인비행체 탐지/추적 알고리즘 연구</h2>
-<p class="meta"><small>🤝🏻 팀과제 &nbsp;|&nbsp;📅 2019.04.15 ~ 2019.11.30</small></p><hr/>
-  <ul>
-    <h3>📌 주요 내용</h3>
-      <ol>
-        <li>딥러닝 탐지 네트워크의 성능 개선을 위한 드론 이미지 데이터 세트 생성</li>
-        <li>속도와 정확도를 고려하여 적합한 알고리즘을 선정하고 학습 및 평가 수행</li>
-        <li>FPN Detector와 Optical Flow Tracker 연동을 위한 작업</li>
-        <li>오검출을 줄이기 위한 후처리 알고리즘 개발</li>
-      </ol>
-    <br>
-    <h3>🙋‍♀️ 팀내 역할 - 학생 연구원</h3>
-      <ol>
-        <li>드론 영상 시퀀스 확보 및 Ground Truth 생성, 데이터 정리</li>
-        <li>논문 검토,머신러닝 / 딥러닝 기반 탐지 네트워크 분석 (Cascades Classifier, YOLOv3, YOLOv3-tiny, MobileNet+YOLOv3,  FPN 등)</li>
-        <li>Cascades Classifier, YOLOv3, FPN Train/Test, 결과 분석</li>
-        <li>Boost 라이브러리를 이용하여 Visual Studio(C++)로 구현되어있는 Tracker와 Tensorflow로 구현되어있는 Detector를 연동</li>
-        <li>영상 시퀀스의 연속적인 특성(드론의 이동거리 및 크기)을 이용하여 Detector의 탐지 결과 중 오검출 판단하는 후처리 알고리즘 작성(C++)</li>
-      </ol>
-    <h3>📚 스택</h3>
-    <h3>💻 개발 환경</h3>
-    <h3>🎉 결과 및 성과</h3>
-      <ul>
-        <li>딥러닝 탐지 네트워크 동향 및 구조 파악</li>
-        <li>Cascades Classifier, YOLOv3, FPN Training/Testing 경험</li>
-        <li>Boost라이브러리를 이용한 구현 경험</li>
-        <br>
-        <h3>결과물1. 드론 이미지 데이터 세트 44,986장</h3>
-        
-        <h3>결과물2. 후처리 적용하여 오검출이 개선된 FPN Detector </h3>
-        <h4>후처리 알고리즘 적용 전(왼쪽)/후(오른쪽) </h4></a>
-        결과 영상         
-      </ul>
-    </ul>
