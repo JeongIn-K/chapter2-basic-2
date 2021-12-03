@@ -10,7 +10,7 @@ tags: [About]
 
 ***
 <br>
-![](/img/self.jpg){:style="max-width: 200px" .left}
+![](assets/img/self.jpg)
 <h1>JeongIn Kwon</h1>
 
 ## &#127891; 학력
