@@ -4,14 +4,65 @@ layout: default
 {% include project-header.html %}
 <article class="post">
   {% include pjt-data-list.html %}
-<h2>🛠정리중 입니다⚒</h2>
-<h2></h2>
-
-<h2 id="🗺 지리 데이터">🗺 지리 데이터</h2>
+<h2 id="🗺 크롤링 & 지도 맵핑">🗺 크롤링 & 지도 맵핑 : '푸라닭' 입지 전략 분석</h2>
 <p class="meta"><small> 👩🏻 개인 과제 &nbsp;|&nbsp;📅 2021.11. </small></p><hr/>
+<h3>🏁 개발 목표</h3>
+"푸라닭" 브랜드의 서울 매장 위치와 인구 수 데이터를 이용하여 입지 전략 가설 증명<br><br>
 
-<h3>📌 사용 스킬 및 함수</h3>
+<h3>✨ 핵심 기술</h3>
+웹 크롤링, 데이터 전처리, 지리 정보 분석, 지리 정보 시각화 라이브러리<br><br>
 
-<h3>📌 주요 내용</h3>
+
+<h3>⚙ 가설 설정</h3>
+가설1. 상주 인구가 많은 곳에 매장이 많이 입지해 있을 것이다.<br>
+가설2. 직장인 수가 많은 곳에 매장이 많이 입지해 있을 것이다.<br>
+<br>
+
+<h3>🗂 데이터 준비</h3>
 <ol>
-  <li><h4>.</h4></li>
+  <li>푸라닭 매장 위치: BeautifulSoup, selenium</li>
+  <br>
+  <div class="colorscripter-code" style="color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important; position:relative !important;overflow:auto"><table class="colorscripter-code-table" style="margin:0;padding:0;border:none;background-color:#272727;border-radius:4px;" cellspacing="0" cellpadding="0"><tr><td style="padding:6px;border-right:2px solid #4f4f4f"><div style="margin:0;padding:0;word-break:normal;text-align:right;color:#aaa;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="line-height:130%">1</div><div style="line-height:130%">2</div><div style="line-height:130%">3</div><div style="line-height:130%">4</div><div style="line-height:130%">5</div></div></td><td style="padding:6px 0;text-align:left"><div style="margin:0;padding:0;color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="padding:0 6px; white-space:pre; line-height:130%">soupPRD&nbsp;<span style="color:#0086b3"></span><span style="color:#ff3399">=</span>&nbsp;BeautifulSoup(html,&nbsp;<span style="color:#ffd500">'html.parser'</span>)</div><div style="background-color:#303030; padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;store_name_h2&nbsp;<span style="color:#0086b3"></span><span style="color:#ff3399">=</span>&nbsp;soupPRD.select(f<span style="color:#ffd500">"#result_search&nbsp;&gt;&nbsp;li:nth-of-type({i})&nbsp;&gt;&nbsp;span&nbsp;&gt;&nbsp;p.name"</span>)</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;store_name&nbsp;<span style="color:#0086b3"></span><span style="color:#ff3399">=</span>&nbsp;store_name_h2[<span style="color:#c10aff">0</span>].string&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#999999">#&nbsp;매장명</span></div><div style="background-color:#303030; padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;store_doro&nbsp;<span style="color:#0086b3"></span><span style="color:#ff3399">=</span>&nbsp;soupPRD.select(f<span style="color:#ffd500">"#result_search&nbsp;&gt;&nbsp;li:nth-of-type({i})&nbsp;&gt;&nbsp;span&nbsp;&gt;&nbsp;p.juso&nbsp;&gt;&nbsp;span.doro"</span>)[<span style="color:#c10aff">0</span>].string&nbsp;<span style="color:#999999">#도로명&nbsp;주소</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;result.append([store_name]&nbsp;<span style="color:#0086b3"></span><span style="color:#ff3399">+</span>&nbsp;[store_doro]])</div></div><div style="text-align:right;margin-top:-13px;margin-right:5px;font-size:9px;font-style:italic"><a href="http://colorscripter.com/info#e" target="_blank" style="color:#4f4f4ftext-decoration:none">Colored by Color Scripter</a></div></td><td style="vertical-align:bottom;padding:0 2px 4px 0"><a href="http://colorscripter.com/info#e" target="_blank" style="text-decoration:none;color:white"><span style="font-size:9px;word-break:normal;background-color:#4f4f4f;color:white;border-radius:10px;padding:1px">cs</span></a></td></tr></table></div><br>
+  <img src="/assets/img/projects/puradak/puradak_home.PNG"><br>
+  BeautifulSoup, selenium을 이용하여 푸라닭 홈페이지의 매장 정보를 크롤링하여 csv 파일로 저장<br>
+  <br>
+  사업체 및 종사자 수 데이터: 서울특별시 열린 데이터 광장(<a href="https://data.seoul.go.kr/">https://data.seoul.go.kr/</a>)<br>
+  인구 수 데이터: <a href="https://kosis.kr/">https://kosis.kr/</a><br>
+
+  <li>데이터 전처리</li>
+  <ol>
+    <li>푸라닭 매장 위치 좌표변환</li>
+    <img src="/assets/img/projects/puradak/geocoder.PNG"><br>
+    Geocoder-Xr을 이용하여 매장 주소를 위도, 경도로 변환<br>
+    <br><br>
+    <li>데이터 병합</li>
+    <div class="colorscripter-code" style="color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important; position:relative !important;overflow:auto"><table class="colorscripter-code-table" style="margin:0;padding:0;border:none;background-color:#272727;border-radius:4px;" cellspacing="0" cellpadding="0"><tr><td style="padding:6px;border-right:2px solid #4f4f4f"><div style="margin:0;padding:0;word-break:normal;text-align:right;color:#aaa;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="line-height:130%">1</div><div style="line-height:130%">2</div><div style="line-height:130%">3</div><div style="line-height:130%">4</div><div style="line-height:130%">5</div></div></td><td style="padding:6px 0;text-align:left"><div style="margin:0;padding:0;color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="padding:0 6px; white-space:pre; line-height:130%">puradak_gu&nbsp;<span style="color:#0086b3"></span><span style="color:#ff3399">=</span>&nbsp;[]</div><div style="background-color:#303030; padding:0 6px; white-space:pre; line-height:130%"><span style="color:#ff3399">for</span>&nbsp;i&nbsp;<span style="color:#ff3399">in</span>&nbsp;<span style="color:#4be6fa">range</span>(<span style="color:#4be6fa">len</span>(shp[<span style="color:#ffd500">'address'</span>])):</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;puradak_gu.append(shp[<span style="color:#ffd500">'address'</span>][i].split()[<span style="color:#c10aff">1</span>])</div><div style="background-color:#303030; padding:0 6px; white-space:pre; line-height:130%">shp[<span style="color:#ffd500">'자치구'</span>]&nbsp;<span style="color:#0086b3"></span><span style="color:#ff3399">=</span>&nbsp;puradak_gu</div><div style="padding:0 6px; white-space:pre; line-height:130%">puradak_data&nbsp;<span style="color:#0086b3"></span><span style="color:#ff3399">=</span>&nbsp;shp.iloc[:,[<span style="color:#c10aff">8</span>,<span style="color:#c10aff">2</span>,<span style="color:#c10aff">5</span>,<span style="color:#c10aff">6</span>]]</div></div></td><td style="vertical-align:bottom;padding:0 2px 4px 0"><a href="http://colorscripter.com/info#e" target="_blank" style="text-decoration:none;color:white"><span style="font-size:9px;word-break:normal;background-color:#4f4f4f;color:white;border-radius:10px;padding:1px">cs</span></a></td></tr></table></div><br>
+    다운받은 각각의 csv파일을 데이터프레임으로 불러와서 필요한 열만 추출하여 병합 <br><br>
+  </ol>
+  
+  <li>맵 시각화</li>
+  <ol>
+    <li>마커 찍기</li>
+    <div class ="pjt_window">
+      <iframe src="https://joniekwon.github.io/projects/puradak_count"></iframe></div>
+  
+    <li>매장 수 시각화</li>
+    매장 수가 많을 수록 짙은 색으로 표시<br> 
+    <img src="/assets/img/projects/puradak/puradak_count.PNG"><br><br>
+  </ol>
+  <li>가설 검증</li>
+  가설1. 주간 인구가 많은 곳에 매장이 많이 입지해 있을 것이다.<br>
+  <img src="/assets/img/projects/puradak/puradak_v.PNG"><br>
+  매장 수를 원의 크기로 나타낸 시각화 맵<br><br>
+  인구 수가 많은 곳이 대부분 매장 수도 많이 분포되어 있는 것을 확인<br>
+  <br>
+  <div class="colorscripter-code" style="color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important; position:relative !important;overflow:auto"><table class="colorscripter-code-table" style="margin:0;padding:0;border:none;background-color:#272727;border-radius:4px;" cellspacing="0" cellpadding="0"><tr><td style="padding:6px;border-right:2px solid #4f4f4f"><div style="margin:0;padding:0;word-break:normal;text-align:right;color:#aaa;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="line-height:130%">1</div><div style="line-height:130%">2</div><div style="line-height:130%">3</div></div></td><td style="padding:6px 0;text-align:left"><div style="margin:0;padding:0;color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="padding:0 6px; white-space:pre; line-height:130%">sorted_data&nbsp;<span style="color:#0086b3"></span><span style="color:#ff3399">=</span>&nbsp;data.sort_values(by<span style="color:#0086b3"></span><span style="color:#ff3399">=</span>[<span style="color:#ffd500">'종사자수'</span>],&nbsp;ascending<span style="color:#0086b3"></span><span style="color:#ff3399">=</span><span style="color:#4be6fa">False</span>)</div><div style="background-color:#303030; padding:0 6px; white-space:pre; line-height:130%">sorted_data2&nbsp;<span style="color:#0086b3"></span><span style="color:#ff3399">=</span>&nbsp;data.sort_values(by<span style="color:#0086b3"></span><span style="color:#ff3399">=</span>[<span style="color:#ffd500">'사업체수'</span>],&nbsp;ascending<span style="color:#0086b3"></span><span style="color:#ff3399">=</span><span style="color:#4be6fa">False</span>)</div><div style="padding:0 6px; white-space:pre; line-height:130%">sorted_data3&nbsp;<span style="color:#0086b3"></span><span style="color:#ff3399">=</span>&nbsp;data.sort_values(by<span style="color:#0086b3"></span><span style="color:#ff3399">=</span>[<span style="color:#ffd500">'상주인구'</span>],&nbsp;ascending<span style="color:#0086b3"></span><span style="color:#ff3399">=</span><span style="color:#4be6fa">False</span>)</div></div></td><td style="vertical-align:bottom;padding:0 2px 4px 0"><a href="http://colorscripter.com/info#e" target="_blank" style="text-decoration:none;color:white"><span style="font-size:9px;word-break:normal;background-color:#4f4f4f;color:white;border-radius:10px;padding:1px">cs</span></a></td></tr></table></div><br>
+  <br>
+  <img src="/assets/img/projects/puradak/table.PNG"><br><br>
+  표를 정렬하여 살펴 보아도 상주 인구 수가 많은 곳이 대체로 매장수도 많은 것을 확인할 수 있다. 따라서 가설 1은 타당하다고 할 수 있다.
+  
+
+
+</ol>
+
+  <li></li>
