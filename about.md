@@ -10,14 +10,14 @@ tags: [About]
 
 ***
 <br>
-![](assets/img/self.jpg)
+![](/img/self.jpg){:style="max-width: 200px" .left}
 <h1>JeongIn Kwon</h1>
 
 ## &#127891; 학력
 2017.08. ~ 2020.02. 국립한밭대학교 정보통신대학원 멀티미디어공학과 석사<br>2009.03. ~ 2014.02. 국립한밭대학교 산업경영공학과
 
 ## &#128270; 관심분야
-머신러닝, 딥러닝, 컴퓨터 비전, 빅데이터 분석
+백엔드, 머신러닝, 딥러닝, 컴퓨터 비전, 빅데이터 분석
 
 ## &#128218; 스킬
 Python, SQL, C/C++, Java, R, HTML/CSS
@@ -33,5 +33,5 @@ Python, SQL, C/C++, Java, R, HTML/CSS
 | 2020.12.|   정보처리기사  |  한국산업인력공단 |
 
 ## &#128150; 좋아하는 것
-![Rin](/assets/img/mylove.JPG)
+![Rin](/assets/img/mylove.JPG){:width="100" height="100"}
 &#127844; &#127918; &#127929; &#127946;
