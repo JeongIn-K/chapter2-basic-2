@@ -18,8 +18,8 @@ layout: default
   <br>  
   <img src="/assets/img/projects/selective_clinic/data.PNG"><br>
   <br>
-  선별진료소 현황 : 공공데이터 포털(<a href="https://www.data.go.kr/data/15043131/fileData.do">https://www.data.go.kr/data/15043131/fileData.do</a>)<br>
-  인구 수 데이터: <a href="https://kosis.kr/">https://kosis.kr/</a><br><br>
+  공공데이터 포털(<a href="https://www.data.go.kr/data/15043131/fileData.do">https://www.data.go.kr/data/15043131/fileData.do</a>)<br>
+  <li>인구 수 데이터: <a href="https://kosis.kr/">https://kosis.kr/</a></li><br><br>
 
   <h3>✂ 데이터 전처리</h3>
   <ul>
@@ -51,5 +51,11 @@ layout: default
     <div class="colorscripter-code" style="color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important; position:relative !important;overflow:auto"><table class="colorscripter-code-table" style="margin:0;padding:0;border:none;background-color:#272727;border-radius:4px;" cellspacing="0" cellpadding="0"><tr><td style="padding:6px;border-right:2px solid #4f4f4f"><div style="margin:0;padding:0;word-break:normal;text-align:right;color:#aaa;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="line-height:130%">1</div><div style="line-height:130%">2</div></div></td><td style="padding:6px 0;text-align:left"><div style="margin:0;padding:0;color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="padding:0 6px; white-space:pre; line-height:130%">MC_count&nbsp;<span style="color:#0086b3"></span><span style="color:#ff3399">=</span>&nbsp;local_MC_Population[<span style="color:#ffd500">'count'</span>]</div><div style="background-color:#303030; padding:0 6px; white-space:pre; line-height:130%">local_MC_Population[<span style="color:#ffd500">'MC_ratio'</span>]&nbsp;<span style="color:#0086b3"></span><span style="color:#ff3399">=</span>&nbsp;MC_count.div(local_MC_Population[<span style="color:#ffd500">'인구수'</span>],&nbsp;axis<span style="color:#0086b3"></span><span style="color:#ff3399">=</span><span style="color:#c10aff">0</span>)<span style="color:#0086b3"></span><span style="color:#ff3399">*</span><span style="color:#c10aff">100000</span></div></div></td><td style="vertical-align:bottom;padding:0 2px 4px 0"><a href="http://colorscripter.com/info#e" target="_blank" style="text-decoration:none;color:white"><span style="font-size:9px;word-break:normal;background-color:#4f4f4f;color:white;border-radius:10px;padding:1px">cs</span></a></td></tr></table></div><br>
     인구 수 데이터와 선별진료소 데이터를 병합하고 인구수 10만명 당 선별진료소 비율을 구하여 블록맵에 색깔로 표시<br><br><br>
     <img src="/assets/img/projects/selective_clinic/blockMap_MC_ratio.png"><br><br>
-
+  <h3>📋 결과 분석</h3>
+  <ul>
+  <li>시도군구는 총 230개의 지역으로 분류되었으며 선별진료소가 가장 적은 지역은 1개의 선별진료소가 있으며 세종시, 울릉군 등의 총 46개의 지역이 있음</li>
+  <li>선별진료소가 가장 많은 지역은 8개의 선별진료소가 있으며 경기도 고양시, 경기도 수원시, 제주특별시 등의 7개 지역이 해당</li>
+  <li>서울특별시 강서구는 인구수 대비 선별진료소 비율 약 0.17로 인구수 대비 선별진료소가 매우 부족한 것으로 나타남</li>
+  <li>경상북도 울릉군은 인구수가 적기 때문에 비율 10.5로 가장 높은 것으로 나왔으나 선별진료소가 단 1개 뿐이기 때문에 적당한 개수로 판단됨</li>
+</ul>
   </ul>
