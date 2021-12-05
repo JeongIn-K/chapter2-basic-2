@@ -19,7 +19,7 @@ layout: default
 <br>
 
 <h3>🗂 데이터 준비</h3>
-<ol>
+<ul>
   <li>푸라닭 매장 위치: BeautifulSoup, selenium</li>
   <br>
   <div class="colorscripter-code" style="color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important; position:relative !important;overflow:auto"><table class="colorscripter-code-table" style="margin:0;padding:0;border:none;background-color:#272727;border-radius:4px;" cellspacing="0" cellpadding="0"><tr><td style="padding:6px;border-right:2px solid #4f4f4f"><div style="margin:0;padding:0;word-break:normal;text-align:right;color:#aaa;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="line-height:130%">1</div><div style="line-height:130%">2</div><div style="line-height:130%">3</div><div style="line-height:130%">4</div><div style="line-height:130%">5</div></div></td><td style="padding:6px 0;text-align:left"><div style="margin:0;padding:0;color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="padding:0 6px; white-space:pre; line-height:130%">soupPRD&nbsp;<span style="color:#0086b3"></span><span style="color:#ff3399">=</span>&nbsp;BeautifulSoup(html,&nbsp;<span style="color:#ffd500">'html.parser'</span>)</div><div style="background-color:#303030; padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;store_name_h2&nbsp;<span style="color:#0086b3"></span><span style="color:#ff3399">=</span>&nbsp;soupPRD.select(f<span style="color:#ffd500">"#result_search&nbsp;&gt;&nbsp;li:nth-of-type({i})&nbsp;&gt;&nbsp;span&nbsp;&gt;&nbsp;p.name"</span>)</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;store_name&nbsp;<span style="color:#0086b3"></span><span style="color:#ff3399">=</span>&nbsp;store_name_h2[<span style="color:#c10aff">0</span>].string&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#999999">#&nbsp;매장명</span></div><div style="background-color:#303030; padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;store_doro&nbsp;<span style="color:#0086b3"></span><span style="color:#ff3399">=</span>&nbsp;soupPRD.select(f<span style="color:#ffd500">"#result_search&nbsp;&gt;&nbsp;li:nth-of-type({i})&nbsp;&gt;&nbsp;span&nbsp;&gt;&nbsp;p.juso&nbsp;&gt;&nbsp;span.doro"</span>)[<span style="color:#c10aff">0</span>].string&nbsp;<span style="color:#999999">#도로명&nbsp;주소</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;result.append([store_name]&nbsp;<span style="color:#0086b3"></span><span style="color:#ff3399">+</span>&nbsp;[store_doro]])</div></div><div style="text-align:right;margin-top:-13px;margin-right:5px;font-size:9px;font-style:italic"><a href="http://colorscripter.com/info#e" target="_blank" style="color:#4f4f4ftext-decoration:none">Colored by Color Scripter</a></div></td><td style="vertical-align:bottom;padding:0 2px 4px 0"><a href="http://colorscripter.com/info#e" target="_blank" style="text-decoration:none;color:white"><span style="font-size:9px;word-break:normal;background-color:#4f4f4f;color:white;border-radius:10px;padding:1px">cs</span></a></td></tr></table></div><br>
@@ -28,8 +28,8 @@ layout: default
   <br>
   사업체 및 종사자 수 데이터: 서울특별시 열린 데이터 광장(<a href="https://data.seoul.go.kr/">https://data.seoul.go.kr/</a>)<br>
   인구 수 데이터: <a href="https://kosis.kr/">https://kosis.kr/</a><br><br>
-
-  <li>✂ 데이터 전처리</li>
+</ul>
+  <h3>✂ 데이터 전처리</h3>
   <ul>
     <li>푸라닭 매장 위치 좌표변환</li>
     <br>
@@ -42,7 +42,7 @@ layout: default
     다운받은 각각의 csv파일을 데이터프레임으로 불러와서 필요한 열만 추출하여 병합 <br><br>
   </ul>
   
-  <li>🗺 맵 시각화</li><br>
+  <h3>🗺 맵 시각화</h3><br>
   <ul>
     <li>마커 찍기</li><br>
     <div class ="pjt_window">
@@ -52,7 +52,7 @@ layout: default
     매장 수가 많을 수록 짙은 색으로 표시<br> 
     <img src="/assets/img/projects/puradak/puradak_count.PNG"><br><br>
   </ul>
-  <li>💡 가설 검증</li>
+  <h3>💡 가설 검증</h3>
   가설1. 주간 인구가 많은 곳에 매장이 많이 입지해 있을 것이다.<br>
   <img src="/assets/img/projects/puradak/puradak_v.png">
   매장 수를 원의 크기로 나타낸 시각화 맵<br><br>
@@ -61,5 +61,3 @@ layout: default
   <div class="colorscripter-code" style="color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important; position:relative !important;overflow:auto"><table class="colorscripter-code-table" style="margin:0;padding:0;border:none;background-color:#272727;border-radius:4px;" cellspacing="0" cellpadding="0"><tr><td style="padding:6px;border-right:2px solid #4f4f4f"><div style="margin:0;padding:0;word-break:normal;text-align:right;color:#aaa;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="line-height:130%">1</div><div style="line-height:130%">2</div><div style="line-height:130%">3</div></div></td><td style="padding:6px 0;text-align:left"><div style="margin:0;padding:0;color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="padding:0 6px; white-space:pre; line-height:130%">sorted_data&nbsp;<span style="color:#0086b3"></span><span style="color:#ff3399">=</span>&nbsp;data.sort_values(by<span style="color:#0086b3"></span><span style="color:#ff3399">=</span>[<span style="color:#ffd500">'종사자수'</span>],&nbsp;ascending<span style="color:#0086b3"></span><span style="color:#ff3399">=</span><span style="color:#4be6fa">False</span>)</div><div style="background-color:#303030; padding:0 6px; white-space:pre; line-height:130%">sorted_data2&nbsp;<span style="color:#0086b3"></span><span style="color:#ff3399">=</span>&nbsp;data.sort_values(by<span style="color:#0086b3"></span><span style="color:#ff3399">=</span>[<span style="color:#ffd500">'사업체수'</span>],&nbsp;ascending<span style="color:#0086b3"></span><span style="color:#ff3399">=</span><span style="color:#4be6fa">False</span>)</div><div style="padding:0 6px; white-space:pre; line-height:130%">sorted_data3&nbsp;<span style="color:#0086b3"></span><span style="color:#ff3399">=</span>&nbsp;data.sort_values(by<span style="color:#0086b3"></span><span style="color:#ff3399">=</span>[<span style="color:#ffd500">'상주인구'</span>],&nbsp;ascending<span style="color:#0086b3"></span><span style="color:#ff3399">=</span><span style="color:#4be6fa">False</span>)</div></div></td><td style="vertical-align:bottom;padding:0 2px 4px 0"><a href="http://colorscripter.com/info#e" target="_blank" style="text-decoration:none;color:white"><span style="font-size:9px;word-break:normal;background-color:#4f4f4f;color:white;border-radius:10px;padding:1px">cs</span></a></td></tr></table></div><br>
   <img src="/assets/img/projects/puradak/table.png"><br>
   표를 정렬하여 살펴 보아도 상주 인구 수가 많은 곳이 대체로 매장수도 많은 것을 확인할 수 있다. 따라서 가설 1은 타당하다고 할 수 있다.
-
-</ol>
