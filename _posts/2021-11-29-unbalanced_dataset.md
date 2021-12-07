@@ -40,4 +40,5 @@ X_upsampled, y_upsampled = resample(X_imb[y_imb == 1], y_imb[y_imb==1], replace=
 
 ### 다른 방법들
 [참고](https://sjpyo.tistory.com/49)
+[imbalanced-learn.org](https://imbalanced-learn.org/stable/user_guide.html#user-guide)
 머신러닝 교과서 181p~
