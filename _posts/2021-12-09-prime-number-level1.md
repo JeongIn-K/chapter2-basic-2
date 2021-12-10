@@ -3,7 +3,7 @@ title: 소수 찾기 level 1
 excerpt: 
 date: 2021-12-09 23:43:00 +0800
 categories: [코딩테스트]
-tags: [프로그래머스level1]
+tags: [프로그래머스Level1]
 toc: true
 toc_sticky: true
 ---
