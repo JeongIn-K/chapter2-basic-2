@@ -54,6 +54,7 @@ def solution(m,n, board):
 
 ### 해설
 `board = [list(i) for i in board]` <br>
+
 * 문자열로 주어지는 입력을 2차원 리스트로 변환
 
 
@@ -68,7 +69,8 @@ while True:
                     same_block.add((i+1,j+1))
         if len(same_block) == 0:
             break
-            ```
+```
+
 * 같은 블록으로 구성된 2x2 블록이 없을때까지 루프 돌면서 같은 블록의 인덱스를 same_block에 저장
 
 ```python
@@ -78,6 +80,7 @@ else:
                 (i,j) = same_block.pop()
                 board[i][j] = ' '
 ```
+
 * 모든 2x2 블록이 동시에 없어져야 하므로 바로 지우지 않고 set에 좌표값 저장해두었다가 일괄적으로 삭제하는 동시에 삭제한 블록 수 count<br>
 * 사라진 블록은 공백으로 대체
 
@@ -92,6 +95,7 @@ def shift_blocks(board,m):
         new_board.append([i for i in temp])
     return list(map(list, zip(*new_board)))
 ```
+
 * 블록이 떨어지는걸 구현하기 위해 행과열을 바꾼 후 각 행의 공백을 없앤 문자열 앞에 원래 길이만큼 공백 채워줌
 * 다시 행과열을 바꾼 리스트로 반환
 
