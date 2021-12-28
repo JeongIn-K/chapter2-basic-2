@@ -1,7 +1,7 @@
 ---
 title: python EDA 관련 패키지
 excerpt: 
-date: 2021-12-14 17:27:00 +0800
+date: 2021-12-28 17:27:00 +0800
 categories: 
 tags: [ML/DL, EDA]
 toc: true
