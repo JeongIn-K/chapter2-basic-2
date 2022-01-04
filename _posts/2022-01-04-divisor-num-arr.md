@@ -1,7 +1,7 @@
 ---
 title: 나누어 떨어지는 숫자 배열
 excerpt: https://programmers.co.kr/learn/courses/30/lessons/12910
-date: 2021-12-14 15:51:00 +0800
+date: 2022-01-04 15:51:00 +0800
 categories: [코딩테스트]
 tags: [프로그래머스Level1]
 toc: true
