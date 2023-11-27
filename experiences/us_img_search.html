@@ -1,0 +1,47 @@
+---
+layout: default
+---
+{% include exp-header.html %}
+  <article class="post">
+    {% include exp-list.html %}
+<h1 id="💡 마크뷰(미국) - 미국 유사 상표 이미지 검색 서비스">💡마크뷰(미국) - 미국 유사 상표 이미지 검색 서비스</h1>
+<p class="meta"><small>📅 2022.10 ~ 2022.11</small></p><hr/>
+  <ul>
+    <h3>📚 사용 스택</h3>
+    <img src="https://img.shields.io/badge/Python-3776AB.svg?&style=for-the-badge&logo=Python&logoColor=white"/>
+    <img src="https://img.shields.io/badge/PyTorch-EE4C2C.svg?&style=for-the-badge&logo=PyTorch&logoColor=white"/>
+    <img src="https://img.shields.io/badge/Pandas-150458.svg?&style=for-the-badge&logo=Pandas&logoColor=white"/>
+    <img src="https://img.shields.io/badge/OpenCV-5C3EE8.svg?&style=for-the-badge&logo=OpenCV&logoColor=white"/>
+    <img src="https://img.shields.io/badge/Docker-2496ED.svg?&style=for-the-badge&logo=Docker&logoColor=white"/>
+    <img src="https://img.shields.io/badge/fastapi-009688.svg?&style=for-the-badge&logo=fastapi&logoColor=white"/>
+    <img src="https://img.shields.io/badge/mongodb-47A248.svg?&style=for-the-badge&logo=MongoDB&logoColor=white"/>
+    <br><br>
+
+    <h3>💻 개발 환경</h3>
+      <img src="https://img.shields.io/badge/Ubuntu-E95420.svg?&style=for-the-badge&logo=ubuntu&logoColor=white"/>
+    <br><br>
+
+    <h3>👥 팀프로젝트 </h3>
+    <small><b>AI 엔지니어 1</b>, 백엔드 엔지니어 1, 프론트엔드 엔지니어 1</small>
+    <br><br>
+      <ol>
+        <li> 미국 유사 상표 이미지 검색 API 개발</li>
+        <li> 유사 상표 이미지 검색을 위한 미국 상표 이미지 100만여개 피쳐맵 데이터 베이스 구축</li>
+        <ul>
+          <li> pymongo를 이용한 DB 조회 및 데이터 추출</li>
+          <li> 이미지 전처리, 피쳐맵 생성, 병합</li>
+        </ul>
+        <li> FastAPI를 이용한 API 서버 개발 및 프론트 엔드 협업 경험</li>
+      </ol>
+    <br><br>
+
+    <h3>🎉 결과 및 성과</h3>
+      <ul>
+        <li>마크뷰 미국 베타버전 런칭</li><br>
+        <il>
+          FastAPI Code 일부
+          <br/>
+          <div class="colorscripter-code" style="color:#f0f0f0;font-family:나눔고딕코딩 !important; position:relative !important;overflow:auto"><table class="colorscripter-code-table" style="margin:0;padding:0;border:none;background-color:#272727;border-radius:4px;" cellspacing="0" cellpadding="0"><tr><td style="padding:6px;border-right:2px solid #4f4f4f"><div style="margin:0;padding:0;word-break:normal;text-align:right;color:#aaa;font-family:나눔고딕코딩 !important;line-height:130%"><div style="line-height:130%">1</div><div style="line-height:130%">2</div><div style="line-height:130%">3</div><div style="line-height:130%">4</div><div style="line-height:130%">5</div><div style="line-height:130%">6</div><div style="line-height:130%">7</div><div style="line-height:130%">8</div><div style="line-height:130%">9</div><div style="line-height:130%">10</div><div style="line-height:130%">11</div><div style="line-height:130%">12</div><div style="line-height:130%">13</div><div style="line-height:130%">14</div><div style="line-height:130%">15</div></div></td><td style="padding:6px 0;text-align:left"><div style="margin:0;padding:0;color:#f0f0f0;font-family:나눔고딕코딩 !important;line-height:130%"><div style="padding:0 6px; white-space:pre; line-height:130%">@app.post(<span style="color:#ffd500">"/USuploadfile"</span>)</div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#ff3399">def</span>&nbsp;upload_queryImg(</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;top&nbsp;:&nbsp;Optional[<span style="color:#4be6fa">int</span>]&nbsp;<span style="color:#0086b3"></span><span style="color:#ff3399">=</span>&nbsp;Form(<span style="color:#c10aff">1000</span>),</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;model&nbsp;:&nbsp;Optional[<span style="color:#4be6fa">str</span>]&nbsp;<span style="color:#0086b3"></span><span style="color:#ff3399">=</span>&nbsp;Form(<span style="color:#ffd500">"resnet18"</span>),</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#4be6fa">file</span>:UploadFile&nbsp;<span style="color:#0086b3"></span><span style="color:#ff3399">=</span>&nbsp;File(...),&nbsp;<span style="color:#999999">#&nbsp;쿼리이미지&nbsp;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;result_version:&nbsp;Optional[<span style="color:#4be6fa">int</span>]&nbsp;<span style="color:#0086b3"></span><span style="color:#ff3399">=</span>&nbsp;Form(<span style="color:#c10aff">0</span>),&nbsp;<span style="color:#999999">#&nbsp;일반검색&nbsp;:&nbsp;0&nbsp;,&nbsp;요부검색&nbsp;:&nbsp;1</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;api_key:&nbsp;APIKey&nbsp;<span style="color:#0086b3"></span><span style="color:#ff3399">=</span>&nbsp;Depends(get_api_key)</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;):</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;query_data&nbsp;<span style="color:#0086b3"></span><span style="color:#ff3399">=</span>&nbsp;QueryInput(query_img&nbsp;<span style="color:#0086b3"></span><span style="color:#ff3399">=</span>&nbsp;QueryImage(query_img<span style="color:#0086b3"></span><span style="color:#ff3399">=</span><span style="color:#4be6fa">file</span>),&nbsp;request_info&nbsp;<span style="color:#0086b3"></span><span style="color:#ff3399">=</span>&nbsp;RequestInfo(top<span style="color:#0086b3"></span><span style="color:#ff3399">=</span>top,&nbsp;model<span style="color:#0086b3"></span><span style="color:#ff3399">=</span>model,&nbsp;result_version<span style="color:#0086b3"></span><span style="color:#ff3399">=</span>result_version))&nbsp;<span style="color:#999999">#&nbsp;entity&nbsp;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;service&nbsp;<span style="color:#0086b3"></span><span style="color:#ff3399">=</span>&nbsp;AppService(query_data)&nbsp;<span style="color:#999999">#&nbsp;npy&nbsp;load</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;result&nbsp;<span style="color:#0086b3"></span><span style="color:#ff3399">=</span>&nbsp;service.run()&nbsp;<span style="color:#999999">#&nbsp;전처리&nbsp;및&nbsp;피쳐맵&nbsp;비교&nbsp;작업&nbsp;수행</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;rv&nbsp;<span style="color:#0086b3"></span><span style="color:#ff3399">=</span>&nbsp;{<span style="color:#ffd500">"meta"</span>:{},&nbsp;<span style="color:#ffd500">"data"</span>:result}</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;<span style="color:#ff3399">return</span>&nbsp;rv</div></div><div style="text-align:right;margin-top:-13px;margin-right:5px;font-size:9px;font-style:italic"><a href="http://colorscripter.com/info#e" target="_blank" style="color:#4f4f4ftext-decoration:none">Colored by Color Scripter</a></div></td><td style="vertical-align:bottom;padding:0 2px 4px 0"><a href="http://colorscripter.com/info#e" target="_blank" style="text-decoration:none;color:white"><span style="font-size:9px;word-break:normal;background-color:#4f4f4f;color:white;border-radius:10px;padding:1px">cs</span></a></td></tr></table></div>
+        </il>
+      </ul>
+    </ul>

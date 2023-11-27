@@ -4,9 +4,8 @@ layout: default
 {% include project-header.html %}
 <article class="post">
   {% include pjt-data-list.html %}
-  <br><br>
-   
-  <h1 id="💬 한글 분석 및 시각화">💬 한글 분석 및 시각화 : '4차 산업혁명'</h1>
+
+  <h2 id="💬 한글 분석 및 시각화">💬 한글 분석 및 시각화 : '4차 산업혁명'</h2>
   <p class="meta"><small> 👩🏻 개인 과제 &nbsp;|&nbsp;📅 2021.11.03</small></p><hr/>
 
   <h3>🏁 개발 목표</h3>
@@ -19,17 +18,17 @@ layout: default
     <li>사용 데이터</li>
     <img src="/assets/img/projects/wordcloud/jsondata.PNG">
     페이스북 전자신문 페이지에서 '4차 산업혁명' 관련 기사를 크롤링한 json 파일<br><br>
-    
 
-    <li>명사 추출: re, Okt()</li><br> 
+
+    <li>명사 추출: re, Okt()</li><br>
     <div class="colorscripter-code" style="color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important; position:relative !important;overflow:auto"><table class="colorscripter-code-table" style="margin:0;padding:0;border:none;background-color:#272727;border-radius:4px;" cellspacing="0" cellpadding="0"><tr><td style="padding:6px;border-right:2px solid #4f4f4f"><div style="margin:0;padding:0;word-break:normal;text-align:right;color:#aaa;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="line-height:130%">1</div><div style="line-height:130%">2</div><div style="line-height:130%">3</div><div style="line-height:130%">4</div><div style="line-height:130%">5</div><div style="line-height:130%">6</div></div></td><td style="padding:6px 0;text-align:left"><div style="margin:0;padding:0;color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="padding:0 6px; white-space:pre; line-height:130%">data&nbsp;<span style="color:#0086b3"></span><span style="color:#ff3399">=</span>&nbsp;json.loads(<span style="color:#4be6fa">open</span>(inputFileName<span style="color:#0086b3"></span><span style="color:#ff3399">+</span><span style="color:#ffd500">'.json'</span>,&nbsp;<span style="color:#ffd500">'r'</span>,&nbsp;encoding<span style="color:#0086b3"></span><span style="color:#ff3399">=</span><span style="color:#ffd500">'utf-8'</span>).read())</div><div style="background-color:#303030; padding:0 6px; white-space:pre; line-height:130%">message&nbsp;<span style="color:#0086b3"></span><span style="color:#ff3399">=</span>&nbsp;<span style="color:#ffd500">''</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;</div><div style="background-color:#303030; padding:0 6px; white-space:pre; line-height:130%"><span style="color:#ff3399">for</span>&nbsp;item&nbsp;<span style="color:#ff3399">in</span>&nbsp;data:</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#ff3399">if</span>&nbsp;<span style="color:#ffd500">'message'</span>&nbsp;<span style="color:#ff3399">in</span>&nbsp;item.keys():</div><div style="background-color:#303030; padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;message&nbsp;<span style="color:#0086b3"></span><span style="color:#ff3399">=</span>&nbsp;message&nbsp;<span style="color:#0086b3"></span><span style="color:#ff3399">+</span>&nbsp;re.sub(r<span style="color:#ffd500">'[^\w]'</span>,&nbsp;<span style="color:#ffd500">'&nbsp;'</span>,&nbsp;item[<span style="color:#ffd500">'message'</span>])&nbsp;<span style="color:#0086b3"></span><span style="color:#ff3399">+</span>&nbsp;<span style="color:#ffd500">''</span></div></div></td><td style="vertical-align:bottom;padding:0 2px 4px 0"><a href="http://colorscripter.com/info#e" target="_blank" style="text-decoration:none;color:white"><span style="font-size:9px;word-break:normal;background-color:#4f4f4f;color:white;border-radius:10px;padding:1px">cs</span></a></td></tr></table></div><br>
-    
+
     json 데이터를 불러와 re 모듈을 사용하여 문자나 숫자가 아닌것을 공백으로 치환<br>
     <br><br>
     <div class="colorscripter-code" style="color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important; position:relative !important;overflow:auto"><table class="colorscripter-code-table" style="margin:0;padding:0;border:none;background-color:#272727;border-radius:4px;" cellspacing="0" cellpadding="0"><tr><td style="padding:6px;border-right:2px solid #4f4f4f"><div style="margin:0;padding:0;word-break:normal;text-align:right;color:#aaa;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="line-height:130%">1</div><div style="line-height:130%">2</div></div></td><td style="padding:6px 0;text-align:left"><div style="margin:0;padding:0;color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="padding:0 6px; white-space:pre; line-height:130%">nlp&nbsp;<span style="color:#0086b3"></span><span style="color:#ff3399">=</span>&nbsp;Okt()</div><div style="background-color:#303030; padding:0 6px; white-space:pre; line-height:130%">message_N&nbsp;<span style="color:#0086b3"></span><span style="color:#ff3399">=</span>&nbsp;nlp.nouns(message)</div></div></td><td style="vertical-align:bottom;padding:0 2px 4px 0"><a href="http://colorscripter.com/info#e" target="_blank" style="text-decoration:none;color:white"><span style="font-size:9px;word-break:normal;background-color:#4f4f4f;color:white;border-radius:10px;padding:1px">cs</span></a></td></tr></table></div><br>
-    
+
     Okt 모듈을 이용하여 치환된 문자들 중 명사만을 추출 nouns()<br>
-    <br>   
+    <br>
   </ol>
   <br>
   <h3>🔎 데이터 탐색 및 모델링 📊</h3><br>
@@ -40,6 +39,6 @@ layout: default
     <br>
     <li>히스토그램을 이용해 단어 빈도를 시각적으로 탐색하고 결과 시각화</li><br>
     <center><img src="/assets/img/projects/wordcloud/wordcount.PNG">
-    <img src="/assets/img/projects/wordcloud/wordcloud.PNG"><br></center>    
+    <img src="/assets/img/projects/wordcloud/wordcloud.PNG"><br></center>
   </ul>
   <br>

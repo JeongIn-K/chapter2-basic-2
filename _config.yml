@@ -2,7 +2,7 @@
 title: Jonie Learning
 description: I'm putting together my portfolio.
 url: https://joniekwon.github.io/
-baseurl: 
+baseurl:
 avatar: /assets/img/avatar.JPG
 paginate: 5
 permalink: pretty
@@ -78,3 +78,9 @@ defaults:
       type: "posts"
     values:
       layout: "post"
+
+minima:
+  social_links:
+    - platform: notion
+      user_url: "https://jnn-dev.notion.site/4d9d0ad97151496fa6444ffafd5b1c8b?v=2035e35456f3461085aa9f1f3d07d1c8&pvs=4"
+      title: "Jnn WIKI"

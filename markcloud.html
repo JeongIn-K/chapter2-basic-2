@@ -1,12 +1,36 @@
 ---
 layout: default
 ---
-{% include project-header.html %}
+{% include exp-header.html %}
 <article class="post">
   {% include exp-list.html %}
-  <h2>프로젝트 미리보기</h2>
-<ul>
-  <a href="https://markcloud.co.kr/mark-view/service-free"><li>마크뷰: 유사 상표 이미지 검색 서비스</li></a>
+  <br><br>
 
-  {% include mldl-gangnam.html %}
-</ul>
+  <h1>프로젝트 미리보기</h1>
+  <h2 id="마크뷰">1. <a href="https://markcloud.co.kr/mark-view/service-free">마크뷰</a> : 유사 상표 검색 서비스 (이미지)</h2>
+    <ul>
+    <p>상표 이미지 도용 방지 등을 위해 이미지를 통한 검색 기능을 제공하는 서비스</p>
+    <h3>유사 상표 이미지 검색</h3>
+    <p>1. 상표 이미지 업로드 및 검색 종류 선택</p>
+    <img src="/assets/img/experience/mk_preview1.PNG"><br></center>
+      <ul>
+        <li><a href="#요부설명">*요부</a>검색: 상표 내 일부분이라도 유사한 부분이 있다면 검색 결과에 포함됨</li>
+        <li>일반검색: 상표 이미지의 전체적인 형태, 분위기 등이 유사한 경우 검색 결과에 포함됨</li>
+      </ul>
+    <p>2. 결과 확인</p>
+    <img src="/assets/img/experience/mk_preview2.PNG"><br></center>
+    <img src="/assets/img/experience/mk_preview5.PNG"><br></center>
+  </ul>
+  <h2 id="도형코드추천모델">2. 도형코드 추천 모델</h2>
+  <ul>
+  <p>상표 이미지 내 <a href="#도형코드설명"> *도형코드</a>를 추천해 주는 Multi-label Classificaion 모델 개발</p>
+
+
+
+  <img src="/assets/img/experience/mk_preview4.PNG"><br></center>
+  % include exp-mk.html %}
+  </ul>
+  <hr/>
+    <small><div id="요부설명"><b>* 요부(要部)</b>: 상표에서 가장 중요한 의미를 지니는 부분을 의미.
+    <div id="도형코드설명"><b>* 도형코드(Vienna Code)</b>: 비엔나 협정에 의하여 발효된 도형 분류 체계로 대분류 29개, 중분류 144개, 세분류 1700여개로 구성.</small><br>
+    <img src="/assets/img/experience/mk_preview3.PNG"><br></center></div>
