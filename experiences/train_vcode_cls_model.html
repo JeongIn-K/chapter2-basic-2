@@ -38,18 +38,27 @@ layout: default
     <br>
     <h3></h3>
       <ol>
-        <li>데이터 정제</li>
+        <li>데이터 분석 및 정제</li>
         <ul>
-        <li>상표 이미지 300만개 이상, 1700여개의 세분류, 극단적으로 불균형한 데이터. 20여개의 중분류가 데이터의 80%이상을 차지</li>
-        <li>도형복합상표(문자와 도형이 모두 있는 상표)에서 도형코드를 예측하게 하기 위해 문자상표, 도형상표 그리고 도형복합의 99%를 train 데이터로, 도형복합의 1%는 valid/test로 split</li>
+          <li>상표 이미지 300만개 이상, 1700여개의 세분류, 극단적으로 불균형한 데이터. 20여개의 중분류가 데이터의 80%이상을 차지</li>
+          <li>같은 클래스여도 shape가 매우 다른 데이터 다수</li>
+          <li>다른 클래스여도 shape가 비슷한 데이터 또한 다수</li>
+          <li>도형복합상표(문자와 도형이 모두 있는 상표)에서 도형코드를 예측하게 하기 위해 문자상표, 도형상표 그리고 도형복합의 99%를 train 데이터로, 도형복합의 1%는 valid/test로 split</li>
         </ul>
         <li>모델 선택 및 학습</li>
         <ul>
+          <li>Pytorch를 이용한 Multi-Label Classification 모델 학습 및 fine-tune</li>
           <li>SOTA인 EfficientNet 선택하여 실험: EfficientNetB0 ~ B5 학습결과 B3가 가장 성능이 높아서 최종 선택</li>
           <li>상표이미지 특성 상 여백과 단순한 도형의 나열이 많아 사전학습된 데이터와 mean, std가 크게 다를 것이라 생각하여 학습데이터의 mean, std를 구해 정규화함</li>
           <li>horizental filp, Color Inversion, ChannelShuffle, JpegCompression 등의 Argumentation 수행</li>
           <div class="colorscripter-code" style="color:#f0f0f0;font-family:나눔고딕코딩 !important; position:relative !important;overflow:auto"><table class="colorscripter-code-table" style="margin:0;padding:0;border:none;background-color:#272727;border-radius:4px;" cellspacing="0" cellpadding="0"><tr><td style="padding:6px;border-right:2px solid #4f4f4f"><div style="margin:0;padding:0;word-break:normal;text-align:right;color:#aaa;font-family:나눔고딕코딩 !important;line-height:130%"><div style="line-height:130%">1</div><div style="line-height:130%">2</div><div style="line-height:130%">3</div><div style="line-height:130%">4</div><div style="line-height:130%">5</div><div style="line-height:130%">6</div><div style="line-height:130%">7</div><div style="line-height:130%">8</div><div style="line-height:130%">9</div></div></td><td style="padding:6px 0;text-align:left"><div style="margin:0;padding:0;color:#f0f0f0;font-family:나눔고딕코딩 !important;line-height:130%"><div style="padding:0 6px; white-space:pre; line-height:130%">train_transform&nbsp;<span style="color:#0086b3"></span><span style="color:#ff3399">=</span>&nbsp;A.Compose([</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A.HorizontalFlip(p<span style="color:#0086b3"></span><span style="color:#ff3399">=</span><span style="color:#c10aff">0.</span><span style="color:#c10aff">5</span>),</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A.ChannelShuffle(always_apply<span style="color:#0086b3"></span><span style="color:#ff3399">=</span><span style="color:#4be6fa">False</span>,&nbsp;p<span style="color:#0086b3"></span><span style="color:#ff3399">=</span><span style="color:#c10aff">0.</span><span style="color:#c10aff">2</span>),</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A.JpegCompression(always_apply<span style="color:#0086b3"></span><span style="color:#ff3399">=</span><span style="color:#4be6fa">False</span>,&nbsp;p<span style="color:#0086b3"></span><span style="color:#ff3399">=</span><span style="color:#c10aff">1.</span><span style="color:#c10aff">0</span>,&nbsp;quality_lower<span style="color:#0086b3"></span><span style="color:#ff3399">=</span><span style="color:#c10aff">30</span>,&nbsp;quality_upper<span style="color:#0086b3"></span><span style="color:#ff3399">=</span><span style="color:#c10aff">100</span>),</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A.Resize(args.imgsz,&nbsp;args.imgsz),</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A.Normalize(mean<span style="color:#0086b3"></span><span style="color:#ff3399">=</span>NORM_PARAM[args.img_proc][<span style="color:#ffd500">'MEAN'</span>],&nbsp;std<span style="color:#0086b3"></span><span style="color:#ff3399">=</span>NORM_PARAM[args.img_proc][<span style="color:#ffd500">'STD'</span>],&nbsp;max_pixel_value<span style="color:#0086b3"></span><span style="color:#ff3399">=</span><span style="color:#c10aff">255.</span><span style="color:#c10aff">0</span>,&nbsp;always_apply<span style="color:#0086b3"></span><span style="color:#ff3399">=</span><span style="color:#4be6fa">False</span>,&nbsp;p<span style="color:#0086b3"></span><span style="color:#ff3399">=</span><span style="color:#c10aff">1.</span>),</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ToTensorV2()</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;])</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;</div></div><div style="text-align:right;margin-top:-13px;margin-right:5px;font-size:9px;font-style:italic"><a href="http://colorscripter.com/info#e" target="_blank" style="color:#4f4f4ftext-decoration:none">Colored by Color Scripter</a></div></td><td style="vertical-align:bottom;padding:0 2px 4px 0"><a href="http://colorscripter.com/info#e" target="_blank" style="text-decoration:none;color:white"><span style="font-size:9px;word-break:normal;background-color:#4f4f4f;color:white;border-radius:10px;padding:1px">cs</span></a></td></tr></table></div>
-          <li>불균형한 1700여개의 세분류 클래스를 동시에 학습하는 것은 너무 도전적인 일이라 판단하여, 28개의 대분류 클래스를 예측하는 모델과 각 대분류에 해당하는 세분류 클래스를 예측하는 28개의 모델을 만들기로 함</li>
+          <li>불균형한 1700여개의 세분류 클래스를 동시에 학습하는 것은 너무 도전적인 일이라 판단하여, 28개의 대분류 클래스를 예측하는 모델(메인모델)과 각 대분류에 해당하는 세분류 클래스를 예측하는 28개의 모델(서브모델)을 만들기로 함</li>
+          <ul>
+            <li>메인 모델은 대분류를 학습하고, 28개의 대분류로 클래스를 나눈 서브 모델은 세분류를 학습</li>
+            <li>메인 모델의 output으로 검출된 대분류에 해당하는 서브 모델의 추론 재수행</li>
+            <li>메인 모델의 confidence와 서브 모델의 confidence를 가중치를 곱하여 최종 검출 결과 결정</li>
+            <li>메인 모델을 거치지 않고 세분류 모델 전체의 추론을 통해 비엔나 코드를 검출하는 것 보다 추론 속도 및 정확도 향상</li>
+          </ul>
         </ul>
       </ol>
     <br><br>
@@ -58,14 +67,15 @@ layout: default
     <img src="/assets/img/experience/mk_preview4.PNG"><br></center>
       <ul>
         <li>accuracy: 평균 0.94, mAP: 0.54</li>
-        <li>라벨링 작업자 속도 70% 이상 향상(동일 기간 작업량 기준)</li>
+        <li>라벨링 작업자 <b>속도 70% 이상 향상</b>(동일 기간 작업량 기준)</li>
         <li>마크뷰의 이미지 검색 결과 개선</li>
           <ul>
             <li>기존 : 문자와 유사해 보이는 도형상표와 문자상표가 혼재되어 결과에 나타남</li>
             <li>적용후 : 모델에서 검출된 비엔나 코드에 해당하는 상표가 우선적으로 나타남</li>
           </ul>
-        <li>NVIDIA Triton Server를 이용한 모델 서빙으로 추론 속도 약 70% 향상 (최대 0.2 초 → 0.06 초)<br><br>
+        <li>NVIDIA Triton Server를 이용한 모델 서빙으로 <b>추론 속도 약 80% 증가</b>
           <ul>
+            <li>메인 ~ 서브 모델 추론 후 output까지 걸리는 소요 시간 평균 1.5s → 평균 0.2s</li>
             <li>Triton Inference Code</li>
             mlc_00: 대분류 28개의 클래스를 분류하는 모델<br>
             mlc_01 ~ mlc_28: 각 번호의 대분류에 해당하는 세분류 클래스를 분류하는 모델 (ex. mlc_01: 대분류 01의 세분류 클래스를 예측)<br>
